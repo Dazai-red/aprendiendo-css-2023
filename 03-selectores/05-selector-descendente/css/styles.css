@@ -1,0 +1,27 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+        Selectores de atributo
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores descendiente
+*/
+
+/* Se aplica a las clases .title-2 que esten dentro de un div */
+
+div .title-2 {
+    background-color: teal;
+}
+
+/* 
+No es recomendable bajar más de un nivel por ejemplo no se recomienda 
+esto: html body div .title-2 como máximo tener 2 elementos para hacer el
+código más entendible 
+*/
+
+
+
+
+

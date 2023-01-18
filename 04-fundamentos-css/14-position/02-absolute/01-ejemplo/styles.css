@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color:  #fff;
+}
+
+.box{
+    text-align: center;
+}
+
+.box-1{
+    background-color: lightcoral;
+}
+
+/* 
+    En el momento en el que a una caja de bloque sin
+    medidas declaradas le indicamos position absolute
+    este pierde sus medidas.
+    En este caso vemos que no es hijo de nadie, solo es
+    hijo del body no tiene ningun elemento contenedor
+    que pueda estar posicionado, por lo tanto este elemento
+    se va a posicionar respecto al body
+*/
+.box-2{
+    background-color: lightgreen;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

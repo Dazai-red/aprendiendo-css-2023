@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectar html con css</title>
+    <!-- 
+        Existen 4 formas de conectar HTML con CSS la primera y la que usaremos normalmente será
+        crear una carpeta llamada css crear un archivo styles.css y en el archivo html colocamos la
+        etiqueta link (nos lo autocompletara visual studio) y en el atributo href escribimos la ruta 
+        del archivo styles.css
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 
+        La segunda forma sería con la etiqueta style esto no se suele utilizar porque si tenemos varios 
+        archivos html tendríamos que estar escribiendo los mismos estilos en cada archivo.
+
+        Esta forma se suele utilizar cuando trabajamos sobre un correo electronico solamente tenemos un archivo html es en estos casos donde insertar css de esta forma si tiene sentido.
+    -->
+    <!-- <style>
+        body {
+            background-color: steelblue;
+        }
+    </style> -->
+
+    <!-- 
+        La última forma que tampoco se debe utilizar nunca es con la etiqueta style colocando un import
+        colocando el archivo css.
+
+        No se debe de hacer porque poner un import implica que se va a cargar el archivo css de forma
+        asíncrona es decir que hasta que no termine de cargar el archivo html no empieza a cargar el 
+        archivo css y si tenemos varías hojas de estilo hasta que no termine de cargar la primera no carga
+        la segunda esto como experiencia de usuario es muy malo porque ves cargando los estilos de forma escalonada.
+
+    -->
+    <!-- <style>
+        @import url(css/styles.css);
+        @import url(css/styles2.css);
+    </style> -->
+</head>
+<body>
+    <!-- 
+        Otra forma de añadir CSS es hacerlo en línea esto se consigue añadiendo el atributo style
+        dentro escribiremos la propiedad y valor que queramos aplicar.
+        Esto es algo que no se recomienda hacer nunca esto era algo que se hacía hace muchos años 
+        cuando no había otra forma de insertar css hay situaciones, muy pocas donde si tenemos que 
+        poner estilos de esta forma pero no lo hacemos desde html lo hacemos desde JavaScript para hacer
+        estilos dinámicos 
+    -->
+    <h1 style="background-color: springgreen;">Conectar HTML con CSS</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero labore odio nostrum commodi dolores fuga explicabo suscipit rem numquam, nulla vel quaerat nobis placeat eaque, aliquam, quibusdam tempora ullam officiis.</p>
+</body>
+</html>

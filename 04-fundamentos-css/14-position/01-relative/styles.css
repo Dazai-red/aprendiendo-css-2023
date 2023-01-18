@@ -1,0 +1,99 @@
+/* 
+    POSITION RELATIVE
+
+    relative -> El elemento mantendrá su posición y medidas
+    en el flujo de renderizado y mantendrá su espacio
+    reservado. Si lo movemos lo hará usando su posición en
+    el html como punto de referencia.
+
+    Cuando movemos una caja con las propiedades top,left,right,
+    bottom el punto que estamos moviendo es el izquierdo superior
+    de la caja. Esto es muy importante ya que incluso cuando tengamos
+    elementos circulares (usando border-radius) la caja se movera respecto
+    a ese punto aunque no la veamos. En estos casos el inspector de elementos
+    del navegador nos servira para saber donde se encuentra ese punto marcando
+    el elemento dentro del html.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+}
+
+.box{
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+/* 
+    en este ejemplo vemos como la caja se desplaza a la derecha 
+    pero su espacio sigue estando donde se encontraba inicialmente  
+    
+ */
+.box-1{
+    background-color: aliceblue;
+    position: relative;
+    left: 100px;
+}
+
+.box-2{
+    background-color: limegreen;
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+.box-3{
+    background-color: lightcoral;
+    position: relative;
+    top: 50px;
+}
+
+.box-4{
+    background-color: aquamarine;
+}
+
+.box-5{
+    background-color: red;
+    position: relative;
+    /* top tiene más preferencia que bottom */
+    top: 50px;
+    bottom: 25px;
+}
+
+.box-6{
+    background-color: palevioletred;
+    /* pasa lo mismo con left tiene más preferencia que right */
+    position: relative;
+    left: 100px;
+    right: 25px;
+}
+
+.box-7{
+    background-color: darkslateblue;
+    position: relative;
+    /* podemos hacer uso de valores negativos tanto en top/bottom/left/right */
+    /* en este caso right -500px es lo mismo que left 500px */
+    right: -500px;
+}
+
+
+/* ejemplo con border-radius para comprobar que se mueve a partir de la esquina superior izquierda */
+.box-8{
+    background-color: cornflowerblue;
+    border-radius: 50px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+
+
+
+

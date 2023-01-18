@@ -1,0 +1,60 @@
+/* 
+        ¿Cómo funciona CSS?
+        Especificidad -> Establece cómo de especifico es un selector para
+        saber que estilo aplicar.
+
+        El calculo se realiza con la siguiente formula:
+            Etiquetas y pseudoelementos 001
+            Clases, atributos y pseudoclases 010
+            Ids 100
+            Estilos en línea 1000
+            !important GANA A TODO Y NO SE USA NUNCA //NOS CARGAMOS LA 
+            ESPECIFICIDAD DEL NAVEGADOR
+        (En visualstudiocode al pasar el mouse por un selector nos 
+        aparece cual es su especificidad)
+        Cascada-> Funciona siempre que la especificidad sobre el elemento 
+        sea siempre la misma
+        Herencia
+
+        En esta página podemos comprobar si estamos haciendo un buen css
+        https://jonassebastianohlsson.com/specificity-graph/
+
+        Si el grafico es más o menos plano significa que estamos 
+        escribiendo un buen css
+*/
+
+h1.title#title{
+    background-color: tomato;
+    /* Se aplica este color independientemente de la cascada por su especificidad */
+}
+
+h1{
+    background-color: red;
+}
+
+.title {
+    background-color: blue;
+}
+
+#title {
+    background-color: green;
+}
+
+h1.title{
+    background-color: rebeccapurple;
+}
+
+h1#title{
+    background-color: teal;
+}
+
+/* Utilizar !Important en general es una mala practico salvo casos muy 
+concretos */
+
+h1.title{
+    background-color: red !important; 
+}
+
+h1.title{
+    background-color: blue !important;
+}

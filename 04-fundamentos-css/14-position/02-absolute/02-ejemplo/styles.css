@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color:  #fff;
+}
+
+/* para verlo mejor voy a darle medidas a ambas cajas */
+
+.box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+/* 
+    Si colocamos un position absolute al box-1
+    veremos como box-2 se coloca en el sito 
+    donde debería de estar box-1, para evitar
+    que se superpongan las cajas la mueve a la derecha
+    100px 
+*/
+
+.box-1{
+    background-color: lightcoral;
+    position: absolute;
+    left: 100px;
+}
+
+.box-2{
+    background-color: lightgreen;
+    
+}

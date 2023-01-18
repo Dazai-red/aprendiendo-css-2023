@@ -1,0 +1,74 @@
+/* 
+    Margin:
+        Es la propiedad que nos permite generar espacio entre elementos.
+        Es un shorthand (propiedad abreviada) que controla 
+        los 4 lados posibles a los que dar márgenes.
+        margin-top: Margen superior
+        margin-right: Margen derecho
+        margin-bottom: Margen inferior
+        margin-left Margen izquierdo
+
+        Admite hasta 4 valores que van en el orden de las agujas del 
+        reloj.
+        4 valores-> margin:top right bottom left;
+        3 valores-> margin: top left/right bottom;
+        2 valores-> margin: top/bottom left/right;
+        1 valor -> margin: top/right/bottom/left  
+*/
+
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin: 100px 50px 10px 200px;
+}
+
+.inline{
+    background-color: lightcoral;
+    color: inherit;
+    /* Los elementos de tipo inline no les afecta el margin top/bottom */
+    margin-bottom: 10000px;
+    margin-top: 50000px;
+    
+}
+
+.inline-2{
+    background-color: lightcoral;
+    color: inherit;
+    /* Los elementos de tipo inline no les afecta el margin top/bottom */
+    margin-bottom: 10000px;
+    margin-top: 50000px;
+    /* solo funcionan los margin left/right es decir solo tienen margenes 
+    horizontales*/
+    margin-left: 300px;
+}
+
+
+/* importante tiene que tener un ancho y alto declarado o no funcionara margin auto*/
+
+.block-2{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    /* con margin-left: auto lo pegamos a la derecha y con margin-right 
+    auto lo pegamos a la izquierda (invertido) */
+    margin-left: auto; 
+}
+
+.header{
+    background-color: chocolate;
+    width: 300px;
+    /* Si ponemos en auto los margenes horizontales se centra el contenido (de forma horizontal)*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    /* para centrar el texto tenemos otra propiedad que entra dentro de 
+    las propiedades para textos text-align */
+}

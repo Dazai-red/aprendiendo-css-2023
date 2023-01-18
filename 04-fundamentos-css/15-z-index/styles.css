@@ -1,0 +1,75 @@
+/* 
+    z-index: Es la propiedad que nos permite ordenar los 
+    elementos superpuestos para controlar cual se coloca
+    por delante y cual por detrás.
+
+    Para que z-index tenga efecto debemos de tener en cuenta: 
+
+    1º El elemento debe de estar posicionado con un valor distinto
+    de static 
+
+    2º Escribir la propiedad z-index con valores de 10 en 10 o incluso
+    de 100 en 100 o 1000 en 1000 para poder poner otros elementos entre 
+    medias en el caso de que lo necesitemos en un futuro que es probable. 
+    NO UTILIZAR NÚMEROS CONSECUTIVOS 1,2,3,4,5,6... etc
+
+    3º EL PADRE JAMAS SE PONDRA POR DELANTE DEL HIJO. 
+    NO FUNCIONA Z-INDEX SOBRE UN PADRE O CONTENDOR si queremos mostrar los
+    hijos detras del elemento padre o contendor colocaremos el z-index en el 
+    hijo de forma negativa y que EL PADRE no tenga un z-index declarado.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: #555;
+    position: relative;
+    z-index: auto;
+    /*z-index: 10;*/
+    /* Si DECLARAMOS UN z-index al padre o contenedor no funciona el z-index del hijo
+    con auto no pasa nada porque es como no poner nada (el valor por defecto)*/
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.box-1{
+    background-color: lightcoral;
+    position: relative;
+    left: 150px;
+    z-index: -10;
+}
+.box-1-2{
+    background-color: aquamarine;
+    position: relative;
+    left: 150px;
+    top: -25px;
+    z-index: -20;
+}
+
+.box-2{
+    background-color: lightgreen;
+    position: relative;
+    top: 50px;
+    z-index: 10;
+}
+
+.box-3{
+    background-color: lightseagreen;
+    position: relative;
+}

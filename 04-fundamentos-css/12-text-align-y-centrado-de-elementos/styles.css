@@ -1,0 +1,89 @@
+/* 
+    TEXT-ALIGN
+
+    text-align es la propiedad que nos permite
+    alinear horizontalmente el contenido de un
+    elemento de bloque siempre que el contenido
+    NO TENGA ANCHO DECLARADO
+
+    Acepta 4 posibles valores
+        text-align: left; -> Alinea el contenido
+        a la izquierda.
+        text-align: right; -> Alinea el contenido
+        a la derecha
+        text-align: center; -> Alinea el contenido
+        al centro
+        text-align: justify; -> alinea el contenido
+        de forma justificada. No es recomendable 
+        usarlo.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.text{
+    /*text-align: left; */ /* valor por defecto */
+    text-align: justify;
+    /* justify no se recomienda porque deja espacios irregulares entre letras */
+}
+
+.box{
+    background-color: #666;
+    width: 100px;
+    padding: 10px 0;
+    margin: 20px auto;
+    border: 2px solid lightcoral;
+    /* centramos el contenido de la caja con text-align, la caja la centramos con margin auto horizontales */
+    text-align: center;
+}
+
+.link{
+    /* text-align centra los contenidos de bloque, un enlace es de tipo línea por lo que no funciona */
+    color: #fff;
+    /* centramos su contenido porque los elementos de bloque ocupan por defecto el 100% lo podemos ver colocando un color */
+    background-color: plum;
+    /* si le ponemos un ancho vemos que el texto no aparece "centrado" pero realmente si esta centrado respecto a su caja */
+    width: 200px;
+    /* para centrar la caja lo que haríamos es margin auto a left-right (margenes horizontales) */
+    display: block;
+    /* con inline-block no funciona, tiene que ser block */
+    margin: 0 auto;
+    /* display: inline-block; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* si le colocamos un text-align center no hace nada esto ocurre porque las imagenes son de tipo línea */
+/* .img{
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+} */
+
+/* otra situación es que tengamos un contenedor para la imagen y lo que queramos sea centrar la imagen respecto a su contenedor */
+
+.img-container{
+    text-align: center;
+    background-color: red;
+}
+
+.img{
+    width: 400px;
+    /* text-align center le afecta solo si es de tipo linea */
+    /* display: block; */
+}
+
+/* 
+    El principal problema es que tenemos que diferencias entre centrar el contenido de la caja o la propia caja
+*/

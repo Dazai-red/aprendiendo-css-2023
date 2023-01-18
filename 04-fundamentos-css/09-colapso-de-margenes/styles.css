@@ -1,0 +1,78 @@
+/* 
+    COLAPSO DE MARGENES
+
+    CSS tiene dos grandes problemas con el colapso de margenes.
+
+    1º margenes verticales colapsan: consite en que cuando tenemos dos cajas
+    1 encima de otra la primera tiene un margin bottom de 20px por ejm y la otra
+    tiene un margin top de 20px lo normal sería pensar que se sumarian haciendo 40px
+    pero esto no es así, solamente quedaria con 20px.
+
+    Para solucionarlo lo que tenemos que hacer es ir dandole margin-bottom a los elementos
+    que se encuentren encima si queremos esa separación de 40px lo que haríamos es darle el
+    margin-bottom de 40px al elemenento que este arriba.
+
+    Este problema solo sucede con los margenes verticales, con los horizontales no hay ningun problema
+    funciona como esperamos. 1 elemento con margin left 20px y otro con margin right de 20px si se suman
+
+    2º margenes entre padres he hijos: cuando un hijo tiene un margen lo que sucede es que su padre se separa 
+    tanto como le hayamos indicado al hijo. (lo que queremos es separarlo respecto al padre no separar el padre con otros elementos)
+    
+    Esto se puuede solucionar de 3 formas: 
+
+    darle un overflow: hidden; al padre
+    darle un padding-top: 0.1px; 
+    border-top: 0.1px solid con el mismo color que el padre;
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+/* 2º problema colapso de hijos */
+.header{
+    background-color: lightcoral;
+    height: 100px;
+    margin-bottom: 20px;
+    /* para solucionarlo tenemos tres formas */
+    /* overflow: hidden; */
+    /* padding-top: 0.1px; */
+    border-top: 0.1px solid lightcoral;
+}   
+
+.title{
+    /* margin 0 para resetear los margenes del titulo que tienen por defecto */
+    margin: 0;
+    margin-top: 30px;
+    /* 
+        queremos este margin de 30px respecto a la caja header
+        pero lo que vemos que sucede es que se separa la caja padre header
+     */
+}
+
+
+/* 1º problema colapso de margenes verticales */
+.box-1,
+.box-2{
+    background-color: lightblue;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 20px; */
+    margin-bottom: 40px;
+}
+
+/* 20px + 20px 40px lo normal sería pensar que esto funciona pero la realidad es que no. */
+/* .box-2{
+    
+    margin-top: 20px;
+    margin-top: 40px;
+} */

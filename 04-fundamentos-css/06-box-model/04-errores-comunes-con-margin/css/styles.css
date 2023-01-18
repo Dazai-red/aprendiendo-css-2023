@@ -1,0 +1,45 @@
+/* 
+    Usar el selector universal con margin 0 y padding 0 es una mala práctica que se recomienda en varios sitios
+    con esto nos cargamos toda la estructura que deben de tener los parrafos, encabezados, listas etc
+
+    Tiene otro problema y es que tendremos que ir elemento por elemento dandole nosotros todos los valores 
+    lo cual es una perdida de tiempo y implica escribir mucho más código del que deberíamos
+*/
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body{
+    /* Algo que si es recomendable es asignarle margin 0 al body
+    ya que los navegadores por defecto traen un margin top de 8px 
+    y esto nos supone no poder posicionar los menús centrados */
+    margin: 0;
+    background-color: #333;
+    /* Otra cosa que se ve es ponerle padding: 0 al body cosa que no tiene sentido porque el body no tiene padding por defecto */
+    /* padding: 0; */
+    color: #fff;
+}
+
+.header{
+    /* Cuándo colocamos un header tendremos el problema de los márgenes de 8px porque los navegadores tienen por defecto 8px de margin */
+    background-color: red;
+    height: 50px;
+}
+
+.title{
+    width: 300px;
+}
+
+.block{
+    margin-top: 100px;
+    /* Otra mala practica es utilizar margin: 0 auto con esto nos cargamos los margins superiores he inferiores */
+    /* margin: 0 auto; */
+    /* para centrar un elemento lo que harémos será poner margin right y left en auto */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+}

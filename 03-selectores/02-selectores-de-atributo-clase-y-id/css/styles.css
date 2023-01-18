@@ -1,0 +1,33 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+        Selectores de atributo
+            id-> #title se escribiria en el html el atributo id="nombre-que-queramos" los id no se recomiendan usar para 
+            javascript y son unicos no se pueden repetir.
+            clase-> .paragraph se escribiria en el html el atributo class="nombre-que-queramos" las clases si se pueden repetir 
+            y se recomiendan usar en CSS
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores Combinadores
+        Pseudoclases - Pseudoelementos
+*/
+
+/* 
+    Es importante saber que los selectores de atributo son keysensitive es decir distingen entre mayusculas y minusculas no es lo mismo title que Title 
+*/
+
+#title{
+    background-color: green;
+}
+
+/* 
+    La ventaja principal del selector de clase es que podemos poner 
+    estilos a un monton de elementos y de esta forma conseguimos estilos 
+    reutilizables.
+*/
+
+.paragraph{
+    background-color: aquamarine;
+}

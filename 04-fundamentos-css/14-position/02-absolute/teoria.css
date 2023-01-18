@@ -1,0 +1,9 @@
+/* 
+    absolute -> El elemento perderá sus medidas y su 
+    espacio reservado. Si lo movemos usará el elemento
+    posicionado contenedor como referencia (si este 
+    tiene un position distinto a static). Si no tiene
+    ninguno, usará el elemento html de referencia.
+    
+*/
+

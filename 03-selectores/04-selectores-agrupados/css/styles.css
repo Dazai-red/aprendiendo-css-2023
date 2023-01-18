@@ -1,0 +1,42 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+        Selectores de atributo
+    Selectores Compuestos
+        Selectores Agrupados
+
+        Selectores Combinadores
+        Pseudoclases - Pseudoelementos
+*/
+
+/* Podemos hacer esto mismo pero con selectores agrupados */
+/*
+.text{
+    background-color: steelblue;
+}
+
+.text-2{
+    background-color: steelblue;
+}
+
+.text-3{
+    background-color: steelblue;
+}
+
+.text-4{
+    background-color: steelblue;
+}*/
+
+/* Usando selectores agrupados */
+
+.text,
+.text-2,
+.text-3,
+.text-4{
+    background-color: steelblue;
+}
+
+
+

@@ -1,0 +1,44 @@
+/* 
+    Fixed -> El elemento perderá sus medidas y su especio
+    reservado.
+    Si lo movemos usará el elemento html de referencia,
+    y además se quedará fijo en esa posición aunque hagamos
+    scroll.
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+/* Para solucionar el problema de que no vemos el encabezado 1
+vamos a darle un padding top al body del mismo alto que el header*/
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+    padding-top: 68px;
+}
+
+/* Al poner position fixed el elemento perdera sus medias
+utilizaremos un width con porcentajes para que se ajuste a 
+el tamaño de la ventana y siempre ocupe todo el espacio*/
+
+.header{
+    text-align: center;
+    padding: 25px 0;
+    background-color: lightskyblue;
+    color: orangered;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* tambien es aplicable a elementos de tipo línea */
+/* pasa igual que con position absolute pasa a ser un elemento de
+bloque al que podemos darle medias */
+.link{
+    background-color: lightcoral;
+    position: fixed;
+    width: 200px;
+}

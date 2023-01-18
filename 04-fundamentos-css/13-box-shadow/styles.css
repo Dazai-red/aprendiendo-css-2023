@@ -1,0 +1,112 @@
+/* 
+    box-shadow
+    
+    La propiedad box-shadow se creo para añadir efectos de 
+    sombra a nuestras cajas.
+
+    En esencia lo que hace es crear un clon de la caja
+    respetando la forma de su box-model (ancho, alto, 
+    redondez)
+
+    La sintaxis de box-shadow se puede escribir de distintas
+    formas segun lo que queramos conseguir.
+        Los valores que le podamos poner son: 
+        offset-x -> Desplazando en x (obligatorio)
+        offset-y -> Desplazando en y (obligatorio)
+        blur-radius -> Desenfoque de la sombra
+        spread-radius -> expansión de la sombra
+        color -> El color de la sombra, si no lo 
+        especificamos lo heredará del elemento al que
+        pertenece
+        inset -> Determina si la sombra será interior o exterior
+
+    Las sombras no ocupan espacio en el modelo de caja.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/* estilos para todas las cajas */
+
+[class^="box-"]{
+    background-color: darkcyan;
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    margin: 20px auto 20px;
+    border-radius: 20px;
+}
+
+/* sombras de cada caja */
+
+.box-1{
+    box-shadow: 250px 20px;
+}
+
+.box-2{
+    /* El desenfoque de la sombra es el 3º valor */
+    box-shadow: 5px 5px 10px;
+}
+
+.box-3{
+    /* el color de la sombra depende del padre de la sombra
+    o en su defecto de los valores por defecto del navegador
+    el color por defecto del html es negro salvo que sea un enlace */
+    color: red;
+    box-shadow: 5px 5px 10px;
+}
+
+.box-4{
+    /* podemos añadirle un color a la sombra si asi lo preferimos */
+    color: red;
+    box-shadow: 5px 5px 10px blue;
+}
+
+.box-5{
+    /* 
+        el 4º valor es la expansión de la sombra
+        es similar a añadirle padding a la sombra
+    */
+    box-shadow: 5px 5px 10px 20px;
+}
+
+.box-6{
+    /* 
+        tambien podriamos darle valores negativos para hacer la sombra
+        más pequeña que su contenedor, para ello tendremos que moverla
+        que se vea en los ejes x y sería similar a crear un borde
+        extra que podemos modificar como queramos
+    */
+    box-shadow: 0px 30px 0 -20px #111;
+}
+
+/* con inset dibujamos las sombras por dentro de la caja */
+
+.box-7{
+    box-shadow: inset 10px 10px 20px 0 #111;
+}
+/* los ejes x e y se invierten cuando colocamos inset */
+.box-8{
+    box-shadow: inset -10px -10px 20px 0 #111;
+}
+
+/* podemos tener varias sombras sin ningun tipo de limite usando comas */
+/* hay que tener en cuenta que el orden de las sombras va de izuquierda a derecha
+siendo la de la izquierda del todo la que más prioridad tiene(similar a z-index) */
+.box-9{
+    border-radius: 0;
+    box-shadow: 5px 5px red, 10px 10px blue, 15px 15px rebeccapurple;
+}
+
+/* podemos crear efectos muy llamativos de esta forma */
+
+.box-10{
+    border-radius: 0;
+    box-shadow: inset 5px 5px red, inset -5px -5px blue;
+}

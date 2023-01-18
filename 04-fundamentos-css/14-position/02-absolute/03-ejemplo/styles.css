@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color:  #fff;
+}
+
+/* para verlo mejor voy a darle medidas a ambas cajas */
+
+.box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+/* 
+    al darle un position al container 
+    las coordenadas del box-1 dependen
+    del contenedor no del body
+    da igual que pongamos relative,
+    absolute, sticky o fixed lo importante
+    es que el contenedor tenga un position
+    distinto de static (valor por defecto)
+*/
+
+/* 
+    aunque haya otros divs por encima de box-1
+    si uno de los divs tiene un position
+    hará el mismo efecto
+*/
+.container{
+    width: 200px;
+    height: 200px;
+    background-color: lightskyblue;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 
+    Si el container no tiene un position asignado
+    diferente de static (valor por defecto) no hará 
+    ningun efecto colocando box-1 en el mismo sitio
+    que box-2
+*/
+
+.box-1{
+    background-color: lightcoral;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.box-2{
+    background-color: lightgreen;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

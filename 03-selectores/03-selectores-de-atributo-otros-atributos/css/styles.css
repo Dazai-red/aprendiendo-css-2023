@@ -1,0 +1,68 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+        Selectores de atributo
+            Otros atributos-> para poner otros atributos
+            [nombre-de-atributo]
+            tambien tenemos la opción de poner su valor
+            [atributo="valor"]
+            tambien tenemos opciones para cuando el valor empiece,
+            contenga o termine por.
+            [atributo^=valor]
+            [atributo*=valor]
+            [atributo$=valor]
+            [atributo|=valor]
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores Combinadores
+        Pseudoclases - Pseudoelementos
+*/
+
+/* 
+    Es importante saber que los selectores de atributo son keysensitive es decir distingen entre mayusculas y minusculas no es lo mismo title que Title 
+*/
+
+/* Ejemplo seleccionando todos los enlaces por su atributo href */
+
+/* atributo */
+
+
+
+[href]{
+    color: brown;
+    text-decoration: none;
+}
+
+/* atributo y su valor */
+
+[href="https://google.com"]{
+    color: orangered;
+}
+
+/* Si empieza por x */
+
+[href^="color"]{
+    color: green;
+}
+
+/* si termina por x */
+
+[href$="-texto"]{
+    background-color: deepskyblue;
+}
+
+/* si tiene x entre medias o en cualquier sitio */
+
+[href*"color"]{
+    color: red;
+}
+
+/* Esto tiene en cuenta si es una palabra sola o es una palabra con un guión al final por ejemplo en o si es en- viene muy bien para seleccionar el atributo lang con os idiomas */
+
+/* tener en cuienta que el atributo lan puede ser para todo el documento */
+
+[lang|="en"]{
+    background-color: blueviolet;
+}

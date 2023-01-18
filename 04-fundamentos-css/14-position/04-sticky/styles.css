@@ -1,0 +1,85 @@
+/* 
+    Sticky -> Es una mezcla de position relative y "fixed".
+    Con este tipo de posicionamiento los valores top,
+    left, bottom y right no sirven para mover el elemento,
+    si no para indicarle en qué punto pasará a tener un
+    comportamiento similar a fixed, hasta llegar a ese punto
+    se comportará como si no tuviera posicionamiento, aunque
+    sí contará como posicionado si necesitáramos colocar otro elemento
+    respecto a el (absolute)
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+    /* padding-top: 68px; */
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+/* 
+    si escribimos position sticky y no indicamos
+    top/bottom/right/left veremos que no hace nada
+*/
+
+/* 
+    al darle un top a partir de esa cordenada
+    (respecto a su padre) se comportara como fixed
+*/
+
+.header{
+    text-align: center;
+    padding: 25px 0;
+    background-color: lightskyblue;
+    color: orangered;
+    /* position: sticky;
+    top: 0; */
+    height: 200px;
+    overflow: visible;
+}
+
+/* 
+    IMPORTANTE el contenedor padre tiene que tener un alto 
+    declarado o más contenido en su defecto o no funcionara
+    el estado fixed porque no tiene suficiente espacio 
+    para hacer scroll.
+
+    Recordemos que este posicionamiento depende de su padre
+    a la hora de usar las coordeanadas con top/left/right/bottom
+*/
+
+/* 
+    IMPORTANTE si el contenedor padre tiene un overflow diferente
+    a visible (valor por defecto) no funcionara position sticky
+*/
+
+/* 
+    como vemos al ponerle sticky el efecto de fixed solo funciona 
+    hasta que llega el final de su contenedor padre
+ */
+
+.menu{
+    position: sticky;
+    top: 0;
+}
+
+/* vamos a ver un ejemplo similar a darle sticky a la clase menu */
+
+article{
+    outline: 1px solid red;
+}
+
+.article-title{
+    position: sticky;
+    top: 0;
+    background-color: #333;
+}
+

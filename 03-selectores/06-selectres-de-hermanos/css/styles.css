@@ -1,0 +1,28 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores descendiente
+        Selector de harmano siguiente
+        selector de hermanos siguientes
+*/
+
+/* Selector de hermano siguiente */
+
+.text-2 + h2{
+    background-color: tomato;
+}
+
+/* Seleccionar varios hermanos siguientes */
+
+.text-2 ~ p {
+    background-color: teal;
+}
+
+
+
+
+
+

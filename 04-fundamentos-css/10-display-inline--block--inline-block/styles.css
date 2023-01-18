@@ -1,0 +1,81 @@
+/* 
+    Repaso: 
+
+    elementos de bloque: tienen un width del 100% por defecto
+    y se les puede cambiar sus medidas(width,height), se les puede asignar margenes verticales
+    y horizontales
+
+    elementos de linea: no pueden usar margenes verticales, no se les puede dar medias (width,height) los elementos de línea
+    se colocan uno al lado de otro (por defecto).
+
+
+    DISPLAY
+
+    La propiedad display nos sirve para cambiar el contexto de los elementos dentro
+    del navegador.
+
+    Admite varios valores
+        none -> Hace que el elemento no se muestre, pero sigue cargándose.
+        
+        La principal diferencia entre las reglas display: none 
+        y visibility: hidden es que display: none no reserva el espacio 
+        del elemento mientras que visibility: hidden sí.
+
+        block -> Hace que el elemento sea de bloque 
+        inline -> Hace que el el elemento sea de línea
+
+        inline-block -> Hace que el elemento sea de línea pero admite 
+        medidas y márgenes verticales.
+
+
+
+    Dentro de display se encuentran grid, flex y otros que estan sacando
+    de forma experimental, flexbox y grid se estudiaran más adelante.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.text{
+    background-color: lightcoral;
+    /* para ver la diferencia entre  display: none y visibility: hidden*/
+    /* display: none; */
+    /* visibility: hidden; */
+
+    /* para convertir un elemento de bloque en elemento de línea */
+    /* display: inline; */
+    /* esto ya no funciona */
+    /* width: 200px;
+    margin-bottom: 100px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link{
+    background-color: #fff;
+    
+    /* los elementos de línea no se los puede 
+    asignar medidas y margenes verticales para 
+    cambiar ese comportamiento usamos display block */
+
+    /* display: block;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 20px; */
+
+    /* cuando tengamos elementos que sean de línea
+    y necesitemos que sean de línea si o si pero 
+    necesitamos darle medidas o margenes verticales */
+    display: inline-block;
+    width: 100px;
+    margin-top: 50px;
+}
+

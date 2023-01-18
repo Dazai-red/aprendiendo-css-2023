@@ -1,0 +1,9 @@
+/* Son prefijos como -webkit-, -moz-, -o-, -ms- que se anteponen al nombre de la propiedad de estilo para que el navegador correspondiente reconozca esa característica. Se aplican a estilos en experimentación que aún no forman parte de una especificación o estándar. La prudencia aconseja no usar prefijos CSS en sitios en producción, pues esas propiedades pueden sufrir alteraciones en el desarrollo de su implementación. Aunque podemos gestionar el acceso a esas propiedades por todos los navegadores usando los prefijos, esto no asegura que todos implementen de la misma forma la característica. E incluso los valores a adjudicar a una propiedad determinada pudieran ser diferentes en cada navegador aunque tuviesen el mismo nombre de propiedad tras su prefijo particular. Por lo tanto mientras no sea estándar debemos tener cuidado con estas nuevas propiedades. Debemos asegurarnos que el nuevo estilo no compromete a la seguridad y que sí lo nuevo no funciona al menos no nos rompa la página. */
+
+/* Para no tener que ir a páginas como https://autoprefixer.github.io/ podemos usar el programa prepros o extensiones para visualstudio code que nos pasen nuestro css a autoprefixer  */
+.example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}

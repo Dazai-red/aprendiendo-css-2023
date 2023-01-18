@@ -1,0 +1,45 @@
+/* 
+    No existe ninguna norma ni especificación sobre como
+    ordenar propiedades pero la mayoría de expertos coinciden
+    en los mismos puntos y es recomendable ordenar las
+    propiedades para poder localizarlas más rápidamente.
+
+    1 - Propiedades de posicionamiento
+    2 - Propiedades de box model
+    3 - Propiedades de texto
+    4 - Propiedades visuales (colores, bordes, background...)
+    5 - El resto
+
+    A continuación un ejemplo:
+
+*/
+
+body{
+    /* Position */
+    position: relative;
+    top: 0;
+    left: 0;
+
+    /* Box model */
+    display: block;
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+
+    /* text */
+    font-size: 16px;
+    text-align: center;
+
+    /* Visual */
+    color: blue;
+    border: 2px solid red;
+    border-radius: 10px;
+
+    /* Varios */
+    opacity: 1;
+    transition: all;
+    /* ... */
+}
+

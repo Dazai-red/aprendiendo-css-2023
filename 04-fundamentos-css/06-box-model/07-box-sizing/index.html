@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">MENU</nav>
+    </header>
+    <h1 class="title">Box model</h1>
+    <div class="block">
+        Soy un bloque con un con ancho de: 200px, un alto de: 200px
+        padding de 20px a todos los lados border: 5px solid black; y un box-sizing: content-box. (valor por defecto)
+    </div>
+    <div class="block-2">
+        Soy un bloque con un con ancho de: 200px, un alto de: 200px
+        padding de 20px a todos los lados border: 5px solid black y un box-sizing: border-box.
+        <br><br>
+        De esta forma el navegador calcula el ancho y alto del div incluyendo 
+        el padding y el border siendo siempre el tamaño que le hemos dado 200px x 200px independientemente
+        del padding/border
+    </div>
+</body>
+</html>

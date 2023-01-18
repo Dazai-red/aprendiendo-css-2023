@@ -1,0 +1,35 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales Ambos se utilizan en casos muy concretos
+            Selector Universal -> * este selector se utiliza con
+            muchisimo cuidado se utiliza en ciertos momentos muy 
+            concretos. 
+            Selector de tipo o etiqueta -> nombre de la etiqueta HTML
+            los navegadores (se verá más adelante)
+        Selectores de atributo
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores Combinadores
+        Pseudoclases - Pseudoelementos
+*/
+
+/* Selector universal */
+
+* {
+    /* poner margin a 0 en todas las etiquetas es una muy mala practica y no se debe hacer */
+    /* margin: 0;  */
+    background-color: lightcoral
+}
+
+/* Selector de etiqueta */
+
+h1 {
+    background-color: lightcyan
+}
+
+p {
+    background-color: lightgreen
+
+}

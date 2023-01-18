@@ -1,0 +1,29 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores descendiente
+        Selector de harmano siguiente
+        selector de hermanos siguientes
+*/
+
+/* Esto selecciona todos los parrafos pero no nos sirve si queremos solo los que sean hijos directos no nos sirve */
+
+/* .container p{
+    background-color: tomato;
+} */
+
+
+.container > p{
+    background-color: tomato;
+}
+
+
+
+
+
+
+
+

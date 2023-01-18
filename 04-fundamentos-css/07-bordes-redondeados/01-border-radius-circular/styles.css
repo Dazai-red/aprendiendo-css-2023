@@ -1,0 +1,37 @@
+/* 
+    Border-radius: Es la propiedad que nos permite redondear
+    vertices de forma independiente.
+    Es un shorthand que engloba 4 propiedades:
+        border-top-left-radius -> Radio del borde superior izquierdo
+        border-top-right-radius -> Radio del borde superior derecho
+        border-bottom-right-radius -> Radio del borde inferior derecho
+        border-bottom-left-radius: -> Radio del borde inferior izquierdo
+
+    Si sólo recibe un valor dibujará un círculo en cada 
+    vértice del radio que especifiquemos.
+
+    border-radius: 50px; Círculo con 50px de radio.
+
+    Si utilizamos border-radius como shorthand hay diferencias entre si queremos
+    dar un valor a cada lado (circulo) o dos (elipse)
+*/
+
+body{
+    background-color: #333;
+    color: #333;
+    margin: 0;
+}
+
+.box{
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto 0;
+    /* border-radius: 50px; */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 200px;
+    /* usando el shorthand */
+    border-radius: 50px 100px 150px 200px;
+}
