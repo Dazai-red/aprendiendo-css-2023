@@ -1,0 +1,48 @@
+/* 
+    rem -> Corresponde a la medida de la "m" de la raíz del
+    documento (html).
+
+    ejemplo: 16px = 1rem
+
+    em -> Corresponde a la medida de la "m" del contexto 
+    donde nos encontramos.
+
+    El estandar del tamaño de fuente por defecto en la raíz
+    del documento es 16px y NO ES RECOMENDABLE MODIFICARLO.
+
+    NOTA: Tanto "em" como "rem" se calculan en base a la 
+    propiedad font-size (tamaño de fuente)
+
+*/
+
+body{
+    background-color: #333;
+    color: lightcoral;
+    /* Si ponemos un font-size aqui y en title
+     o otro elemento ponemos em la medida va a
+    ser el fontsize del body multiplicado por los em que le indiquemos */
+    /* font-size: 10px; */
+    
+}
+
+/* La recomendación es que para tamaños de fuente utilizar siempre rem sin excepción. */
+
+.title{
+    font-size: 2rem;
+    /* prueba con em (no recomendable para textos) */
+    /* font-size: 2em; */
+    /* esto daría 20px porque 2x 10px del body es 20px */
+    margin-bottom: 2em;
+}
+
+/* La recomendación es usar em en estos casos: */
+
+/* Si la medida que establecemos tiene que crecer proporcionalmente 
+al tamaño del texto utilizaremos em */
+.link{
+    background-color: lightcoral;
+    color: #333;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    font-size: 2rem;
+}
