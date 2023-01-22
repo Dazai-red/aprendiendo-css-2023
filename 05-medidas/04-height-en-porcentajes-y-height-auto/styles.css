@@ -1,0 +1,131 @@
+/* 
+    HEIGHT: 
+        % -> Cuando estamos dentro de un contenedor,
+        este tiene que tener un alto declarado, si no
+        no podrá calcular el porcentaje. Si se le 
+        aplica una medida con porcentaje se sustituirá
+        automaticamente por auto.
+
+        Si hacemos uso del position diferente a relative el % 
+        pasara a ser del viewport no del padre.
+
+        auto -> Cuando utilizamos auto el alto lo
+        calculará el navegador en base al contenido del
+        elemento
+
+    NOTA: Height es una propiedad que no se suele utilizar pero
+    si la tenemos que usar lo haremos con mucho cuidado. 
+    Si no es necesario establecer un alto, dejaremos que el contenido 
+    sea el que decida el alto del elemto. (es decir no poner height).
+
+    Si quisieramos añadir espacios entre el contenido lo haremos haciendo
+    uso de la propiedad padding.
+
+    
+
+*/
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: lightcoral;
+}
+
+.header{
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+/* Ejemplo 1 */
+
+.box{
+    width: 300px;
+    /* Si comentamos el height vemos que desaparecen 
+    ambas cajas esto es devido a que no tienen contenido 
+    y el porcentaje de la caja children depende del padre 
+    si el padre desaparece la pequeña tambien */
+    /* height: 300px; */
+    background-color: lightgreen;
+    height: 300px;
+}
+
+.box-children{
+    width: 50%;
+    height: 50%;
+    background-color: lightseagreen;
+}
+
+/* Ejemplo 2 con texto */
+
+.box-2{
+    width: 300px;
+    /* Si comentamos el height vemos que 
+    desaparece solo la 2º caja hija */
+    /* height: 300px; */
+    background-color: lightgreen;
+    height: 300px;
+}
+
+.box-children-2{
+    width: 50%;
+    /* height: 100%; */
+    background-color: lightseagreen;
+}
+
+/* Ejemplo 3 con texto si le ponemos un 100% a la caja padre veremos que se queda igual que poner height auto o nada*/
+
+.box-3{
+    width: 300px;
+    background-color: lightgreen;
+    /* box no tiene caja contenedora su 
+    caja contenedora es el body o html pero ninguno tiene alto declarado
+    pero es muy poco recomendable declarar un alto al body o html */
+    height: 100%;
+}
+
+.box-children-3{
+    width: 50%;
+    /* height: 100%; */
+    background-color: lightseagreen;
+}
+
+/* Ejemplo 4 */
+
+.box-4{
+    width: 300px;
+    background-color: lightgreen;
+    /* En vez de usar height usamos padding-bottom para darle espacio
+    esto se adaptara independientemente al contenido que le pongamos y 
+    no se rompera si añadimos o quitamos contenido*/
+    padding-bottom: 20px;
+
+}
+
+.box-children-4{
+    width: 50%;
+    /* height: 100%; */
+    background-color: lightseagreen;
+}
+
+/* Ejemplo 5: Problema a usar height con % posicionando la caja */
+
+.box-5{
+    width: 300px;
+    background-color: lightgreen;
+    height: 300px;
+
+}
+
+.box-children-5{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* Este 50% ya no corresponde a la caja 
+    contenedora ahora corresponde al viewport.
+    El viewport es todo el espacio visible que 
+    tenemos en el navegador desde la barra del
+    navegador hasta donde termina la ventana */
+    /* para verlo más claro añado top 0 lo comento porque tapa los otros ejemplos*/
+    /* top: 0; */
+    background-color: lightseagreen;
+}
