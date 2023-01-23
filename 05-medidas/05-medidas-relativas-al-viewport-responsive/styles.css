@@ -1,0 +1,78 @@
+/* 
+    VIEWPORT
+        El viewport es el área útil donde se mostrará la página
+        web. IMPORTANTE, tener en cuenta que es el area visible sin hacer scroll.
+        Podemos usar el viewport como medida de varias formas: 
+            vw-> Viewport Width, hace referencia al ancho del viewport.
+            vh -> Viewport Height, hace referencia al alto del viewport.
+            vmax -> Utiliza el valor más grande entre el ancho y el alto del viewport.
+            vmin -> Utiliza el valor más pequeño entre el ancho y el alto del viewport.
+
+            1vw = 1% del ancho del viewport.
+            1vh = 1% del alto del viewport.
+            1vmin = 1% del valor que sea más pequeño del viewport.
+            1vmax = 1% del valor que sea más pequeño del viewport.
+
+        vmax y vmin no son valores que se utilicen mucho pero hay veces que podemos usarlo
+        para adaptar tamaños de fuente segun que dispositivo estemos usando porque son más faciles 
+        de calcular de esta forma que usando mediaquerys, o porcentajes.
+*/
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: lightcoral;
+}
+
+.header{
+    background-color: lightskyblue;
+    text-align: center;
+    /* Este alto se ajusta perfectamente al tamaño de la ventana */
+    height: 100vh;
+    /* En mobile vw no suele dar problemas 
+    porque la barra de scroll no existe visiblemente pero en escritorio si da problemas */
+    width: 100vw;
+    /* En caso de tener un hijo directo del body como un header, main, section
+    no utilizar vw utilizar %  */
+    width: 100%;
+    /* En este caso la etiqueta header es un elemento de bloque por lo que no necesitamos declarar un ancho del 100% */
+} 
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+}
+
+.box-children{
+    width: 50%;
+    /* Si usamos un width con vw la caja se desbordara */
+    width: 50vw;
+    /* Por esto depende de lo que queramos hacer usaremos % o unidades de viewport */
+    height: 100%;
+    background-color: lightseagreen;
+}
+
+/* Ejemplo con vmin/vmax */
+
+.box-2{
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+}
+
+.box-children-2{
+    /* Con 100vmin equivale al 100% de la medida más pequeña del viewport.
+    mientras el ancho sea más pequeño que el alto esto siempre va a medir
+    el 100% del ancho pero en cuanto el ancho se convierta en un valor 
+    mayor que el alto esto deja de crecer.
+    */
+    /* width: 100vmin; */
+
+    /* Con 30vmax pasa justo lo contrario. 30% de la medida máxima del viewport
+    si empezamos a encoger hasta que el alto sea la medida máxima empieza a coger 
+    como referencia el alto en este punto al hacer más pequeño el alto se hace más pequeño. */
+    width: 30vmax;
+    height: 100%;
+    background-color: lightseagreen;
+}

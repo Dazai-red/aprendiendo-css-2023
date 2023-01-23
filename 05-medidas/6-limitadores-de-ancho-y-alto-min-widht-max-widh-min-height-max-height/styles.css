@@ -1,0 +1,60 @@
+/* 
+  
+    Limitadores al ancho y alto
+        Cuando establecemos un width y/o un height con una medida
+        que es relativa, es posible que no queramos que se
+        respete esa medida en todos los casos.
+        Para ello tenemos propiedades que limitan esas medidas.
+            min-width: Indica el ancho minimo que puede alcanzar el
+            elemento.
+            max-widh: Indica el ancho máximo que puede alcanzar el 
+            elemento.
+            min-height: Indica el alto minimo que puede alcanzar el 
+            elemento.
+            max-height: Indica el alto maximo que puede alcanzar el 
+            elemento.
+
+        Las medidas de max-height y min-height no se utilizan demasiado, 
+        lo que más se utiliza es max-widht y min-widht para adaptar cajas
+        segun el tamaño de pantalla del dispositivo de forma responsive. 
+                                         
+*/
+
+body{
+    position: relative;
+    margin: 0; 
+    color: lightcoral;
+    /* truco para posicionar algo siempre abajo */
+    /* no siempre lo pondremos solamente cuando haga falta */
+    min-height: 100vh;
+    background-color: #333;
+    border: 4px solid red;
+}
+
+/* Ejemplo con maxwidth minwidht y maxheight minheight */
+
+.box{
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 60vh;
+    max-height: 300px;
+    min-height: 100px;
+    background-color: lightgreen;
+}
+
+/* .text{
+    margin: 0;
+} */
+
+/* Truco con min-max height para posicionar algo siempre abajo */
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    color: white;
+    text-align: center;
+    background-color: lightseagreen;
+}

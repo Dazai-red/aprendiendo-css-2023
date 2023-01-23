@@ -1,0 +1,42 @@
+/* 
+    Colores
+        La mayoría de las pantallas funcionan con un modo de color
+        aditivo. La suma de RGB da como resultado un blanco 
+        Tenemos varias formas de dar color en CSS
+
+            Keywords -> Palabras clave que representan colores https:/
+            /www.w3.org/wiki/CSS/Properties/color/keywords
+
+            Estos colores estan muy limitados porque no nos da la opción
+            de modificar tonalidades de color.
+
+            IMPORTANTE: Recordar que existe el color "transparent"
+
+        En un desarrollo real estos colores de keywords no los utilizaremos
+        nunca porque lo que se suele utilizar son colores más personalizados.
+
+*/
+
+body{
+    margin: 0;
+    background-color: #333;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    color: lime;
+    margin-bottom: 50px;
+}
+
+/* Ejemplo de uso de transparent para hacer un triangulo */
+
+.box-2{
+    width: 1px;
+    /* Si tratamos de dibujar con css podemos guiarnos 
+    por otros colores y cuando hayamos terminado poner transparent */
+    border-bottom: 200px solid red;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+}

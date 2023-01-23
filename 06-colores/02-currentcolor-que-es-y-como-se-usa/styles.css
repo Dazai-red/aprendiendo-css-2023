@@ -1,0 +1,50 @@
+/* 
+    CurrentColor: Es una palabra clave que se puede usar en
+    lugar de cualquier valor de color y usará el valor ya sea
+    establecido o heredado en la propiedad color.
+    Es decir si ese elemento tiene un color declarado cogera el color de la propiedad
+    color si no heredara el color del elemento más proximo (normalmente body).
+
+    Importante diferenciar la propiedad color de background-color, color es para el color de texto
+    mientras que background-color el color que tendra la caja.
+
+    Hoy en día en navegadores modernos currentcolor ya no es tan utlizado
+    porque existen variables css pero si estamos trabajando con navegadores
+    viejos donde las variables css no estan soportadas currentcolor viene muy bien
+    para poder ir heredando ese color y tener un solo color heredado y currentcolor
+    actue de variable es por eso por lo que es importante conocer como funciona ya
+    que es compatible con todos los navegadores.
+
+*/
+
+body{
+    color: #333;
+    background-color:mediumorchid;
+}
+
+.main{
+    /* RECORDAR color hace referencia al color del texto no al 
+    fondo de la caja. */
+    /* color: currentColor; */
+
+
+
+    /* currentcolor hereda el color de la propiedad
+    color del body (si esa que es para el texto) */
+    /* La diferencia entre inherit es que inherit hereda de la propiedad background-color del body mientras
+    que currentcolor hereda de la propiedad color. */
+    /* background-color: currentColor; */
+
+    /* si al elemento le ponemos un color 
+    currentcolor pasa a tomar el color de la propiedad color de ese mismo elemento */
+    color: aqua;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    /* border por defecto ya utiliza currentcolor */
+    border: 2px solid currentColor;
+    border: 2px solid;
+}
