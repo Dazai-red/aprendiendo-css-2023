@@ -1,0 +1,39 @@
+/* 
+
+    Nota: Si vamos a utilizar una gran cantidad de iconos en nuestra web
+    compensa usar una librería remota.
+    Si solo vamos a usar unos pocos es mejor descargarlos en formato svg
+    y utilizarlos como imágenes.
+
+    Los iconos usados remotamente desde una libreria pueden ser modificados
+    con las propiedades de textos como color, font-size etc.
+
+    Si descargamos el icono crearemos una carpeta llamada assets dentro otra
+    llamada icons es en esta donde se encontraran los iconos que vayamos a usar.
+
+    Los svg no se ven afectados por las propiedades de texto tienen sus propias
+    propiedades
+
+*/
+
+
+
+body{
+    background-color: #333;
+    color: aliceblue;
+}
+
+/* Haciendo uso de la libreria remota  */
+
+.home{
+    font-size: 20rem;
+    color: red;
+}
+
+/* Haciendo uso de un icono svg de forma local */
+
+/* .icon{
+    filter: invert(1);
+} */
+
+

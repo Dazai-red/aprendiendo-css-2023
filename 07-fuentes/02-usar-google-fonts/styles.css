@@ -1,0 +1,59 @@
+/* 
+    Las fuentes de un servidor remoto, son fuentes que se
+    encuentran en un servidor y que nosotros descargamos para
+    su uso, la más famosa es Google Fonts.
+
+    Siempre que utilicemos fuentes no genéricas, debemos poner
+    fuentes genéricas de fallback (respaldo)
+
+    Google Fonts
+    
+        Al usar google fonts es importante seleccionar un idioma
+        para que contenga las tildes, ñ o otros carácteres.
+
+        Podemos seleccinar el número de estilos, el grosor, 
+        inclinación, ancho.
+
+        roboto es la fuente que utiliza google. 
+
+        Al seleccionar una fuente podemos ver otras fuentes
+        pinchando en el nombre de su autor.
+
+        En el apartado de Glyphs nos muestra los glifos esto es
+        importante de revisar para saber que contiene los caracteres
+        que vamos a utilizar como números, tildes, ñ o otros caracteres.
+
+        Es importante leer la licencia en el caso de google fonts todas
+        tienen una licencia gratuita pero hay algunas que pueden tener 
+        una licencia especial.
+
+        En el apartado de Popular pairing widh (numbre de la fuente) 
+        nos da una combinación de que fuentes utilizar con la fuente que hemos
+        elegido si esta arriba indica que se suele utilizar para titulos y la de debajo 
+        es para los parrafos.
+
+        Es importante usar link en vez de la regla import
+        de css porque si por lo que sea google fonts falla 
+        el resto del css que este por detras de import no 
+        se cargaría.
+
+        No usar varios links, utilizar uno solo con todas las
+        fuentes que necesitemos. Así evitaremos hacer más de una
+        petición al servidor reduciendo la carga de nuestro
+        sitio web.
+
+        Al seleccionar una fuente nos aparece tambien la regla css 
+        que tenemos que utilizar junto a su fallback
+
+*/
+
+body{
+    background-color: #333;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    /* Es importante saber que si no hemos seleccionado la fuente
+    con grosor 800 es el propio navegador el que le mete grosor de forma artificial
+    si la fuente dispone de ese grosor lo que haremos será seleccionarla desde google fonts y linkarlo a
+    nuestro HTML */
+    font-weight: 800;
+}

@@ -1,0 +1,63 @@
+/* 
+    Transformaciones de texto
+        text-transform: Esta proiedad nos permite hacer
+        transformaciones ESTÉTICAS en nuestro texto.
+        (IMPORTANTE en JavaScript nos devolvera el texto
+        que tal este escrito en el HTML)
+        Admite valores: 
+            none: No se aplicará ninguna transformación (valor por defecto).
+            uppercase: El texto se pondrá en mayúsculas.
+            lowercase: El texto se pondrá en minúsculas.
+            capitalize: Transforma la primera letra de cada palabra en mayúscula.
+    
+            
+    Adornos en el texto
+        text-decoration: Esta propiedad nos permite controlar la línea que podemos
+        poner en los textos.
+        Admite 4 valores: 
+            none: Elimina cualquier línea (muy usado en los enlaces)
+            underline: Coloca una línea bajo el texto
+            overline: Coloca una línea sobre el texto
+            line-through: Coloca una línea tachando el texto.
+
+        text-decoration no es lo mismo que poner un border debajo ya que si indicamos
+        un padding veremos que la linea de decoración seguira estando en el mismo sitio.
+
+        Si buscamos que la linea este separada del texto entonces usaremos padding y border
+        si buscamos poner una linea sin más muy pegada al texto usaremos text-decoration.
+
+        
+        text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia
+        de que no admite el valor inset ni la expansión de la sombra.
+        Los valores son: 
+            offsetX: Desplazamiento horizontal.
+            offsetY: desplazamiento vertical
+            blur: desenfoque
+            color: color, por defecto coge el del texto
+
+*/
+
+body{
+    background-color: #333;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+.title{
+    font-size: 4rem;
+    /* text-shadow: 450px 40px 1px red; */
+    /* box-shadow: 450px 40px 1px #f006; */
+    /* efecto en 3d */
+    text-shadow: 5px 0 2px;
+}
+
+.text{
+    text-transform: uppercase;
+}
+
+.link{
+    color: inherit;
+    text-decoration: line-through;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}

@@ -1,0 +1,63 @@
+/* 
+    Espaciado en fuentes y textos
+        letter-spacing: Establece la separación entre caracteres,
+        se puede establecer en cualquier medida válida para CSS
+
+        word-spacing: Establece la separación entre palabras,
+        se puede establecer en cualquier medida válida para CSS
+
+        line-height: Establece el alto de cada línea, se puede
+        dar una medida concreta o se puede poner un número que se 
+        multiplicará por el font size del texto al que se lo 
+        estamos aplicando.
+
+    Orientación del texto
+        writing-mode: establece la dirección del texto
+
+*/
+
+body{
+    background-color: #333;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+.text{
+    letter-spacing: 10px;
+    word-spacing: 10px;
+    line-height: 3;
+}
+
+/* 
+    truco con lineheight para centrar texto de forma vertical
+    solo puede ser usado si conocemos el alto del contenedor 
+    y si es solo una línea de texto
+*/
+
+.word-container{
+    background-color: lightcoral;
+    height: 100px;
+    text-align: center;
+}
+
+.word{
+    line-height: 100px;
+}
+
+.text-vertical{
+    /* text-transform: uppercase; */
+    /* la diferencia entre lr y rl es que si tenemos más de una linea
+    se coloca segun la primera letra si es l seria de izquierda a derecha 
+    y la r seria de derecha a izqueirda */
+    /* writing-mode: vertical-lr; */
+}
+
+/* Para escribir en vertical sin rotar las letras */
+
+.text-vertical{
+    text-transform: uppercase;
+    /* word-break rompe palabras si asignamos un ancho muy pequeño 
+    y le indicamos que rompa todo lo que hacemos es romper si dos letras ocupan más de 20px */
+    word-break: break-all;
+    width: 20px;
+}
