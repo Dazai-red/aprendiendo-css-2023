@@ -1,0 +1,76 @@
+// Cómo escribir @media
+
+.selector { color: black; }
+
+@media screen and (breakpoint){
+    .selector { color: grey; }
+}
+
+// ¿Es obligatoria la palabra screen?
+// NO
+
+@media (breakpoint){
+    .selector { color: grey; }
+}
+
+// ¿Se puede poner cualquier propiedad?
+// Si
+
+@media (breakpoint){
+    .selector{
+        color: grey;
+        width: 100%;
+        background-color: red;
+        position: relative;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+// ¿Cómo combinar breackpoints?
+.elemento { color: black; }
+
+// Con 1 breakpoint de resolución
+@media screen and (max-width:768px) {
+
+}
+
+// Con +1 breakpoint de resolución
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .elemento { color: lightslategray; }
+}
+
+// Con breakpoints de dispositivo
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .elemento { color: lightgray; }
+}
+
+// Configurar nuestra página para Dark mode
+@media screen and (prefers-color-scheme:dark) {
+    .elemento { color: lightgray; }
+}
+
+
+
+
+
+
+
+
+
+/* 
+    Existen 2 formas de maquetar en Responsive:
+        1 @media con muchos selectores (Recomendada)
+        1 @media por selector
+*/
+
+
+
+
