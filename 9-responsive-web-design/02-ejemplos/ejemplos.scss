@@ -65,12 +65,143 @@
 
 
 
+
+
 /* 
     Existen 2 formas de maquetar en Responsive:
         1 @media con muchos selectores (Recomendada)
         1 @media por selector
 */
 
+// 1 @media con muchos selectores dentro (Recomendada) 
+.elemento1{ color: black; }
+.elemento2 { color: blue; }
+.elemento3 { color: red; }
+
+@media screen and (max-width: 768px){
+    .elemento1{ color: grey; }
+    .elemento2 { color: aqua; }
+    .elemento3 { color: tomato; }
+}
+
+@media screen and (max-width: 468px){
+    .elemento1{ color: lightgrey; }
+    .elemento2 { color: lightblue; }
+    .elemento3 { color: salmon; }
+}
+
+// tambien podriamos tener varias condiciones en un mismo @media
+@media screen and (max-width: 468px) and (max-width: 768px){
+    .elemento1{ color: white; }
+    .elemento2 { color: azure; }
+    .elemento3 { color: lightsalmon; }
+}
 
 
 
+
+
+
+// 1 @media por selector
+.elemento1 { color: black; }
+
+@media screen and (max-width: 768px){
+    .elemento1{ color: grey; }
+}
+
+@media screen and (max-width:468px){
+    .elemento1 { color: lightgrey; }
+}
+
+.elemento2 { color: blue; }
+
+@media screen and (max-width: 768px){
+    .elemento2{ color: aqua; }
+}
+
+@media screen and (max-width:468px){
+    .elemento2 { color: lightblue; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Tipografía Responsive 
+// (nota: No es recomendable su uso no esta soportado por mayoria navegadores)
+.elemento{
+    /* 
+        Clamp primer parametro: valor minimo que tiene la tipografia,
+        2º porcentaje de la ventana en vw 3º valor es la medida máxima
+    */
+    font-size: clamp(1rem, 20vw, 2rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive Design en SCSS: Ejemplo sencillo
+@mixin media ( $medida: 480px ){
+    @media (max-width: $medida) {
+        @content
+    }
+}
+
+.elemento{
+    color: black;
+
+    // Añadir el @media para 480px como máximo
+    // No hace falta poner el valor porque ya está configurado por defecto en el mixin
+    @include media(){
+        color: red;
+    }
+    // Añadir el @media para 320px como máximo
+    @include media(320px){
+        color: aqua;
+    }
+}
+
+/* 
+    Trucos para un Responsive más suave
+    - Tener un buen Reset de CSS
+    - Colocar siempre los @media siempre al final del archivo CSS
+    - Usar los mismos selectores dentro de los @media para tener la misma especificidad 
+      eso nos ahorrara problemas evitando usar !important
+    - No usar alturas estaticas en las etiquetas esto nos ahorrara muchos @medias
+    - Usar medidas siempre en porcentajes, vw, vh y rems/ems
+    - Calcular bien los anchos usando calc() o margin
+    - Intentar usar, flex o grid si el proyecto lo permite
+
+    Tips: 
+      - Usar una metodología CSS como BEM
+*/

@@ -1,0 +1,89 @@
+
+body{
+    background-color: #333;
+}
+
+
+/* Sin hacer uso de BEM */
+/* De esta forma repetimos mucho código */
+
+/* .button-blue{
+    background-color: royalblue;
+    border-radius: 0.4em;
+    color: #fff;
+    padding: 0.4em 1em;
+    border: none;
+}
+
+.button-red{
+    background-color: firebrick;
+    border-radius: 0.4em;
+    color: #fff;
+    padding: 0.4em 1em;
+    border: none;
+}
+
+.button-ghost-blue{
+    background-color: transparent;
+    border-radius: 0.4em;
+    color: royalblue;
+    padding: 0.4em 1em;
+    border: 1px solid royalblue;
+}
+
+.button-ghost-red{
+    background-color: transparent;
+    border-radius: 0.4em;
+    color: firebrick;
+    padding: 0.4em 1em;
+    border: 1px solid firebrick;
+} */
+
+
+
+/* usando BEM */
+
+/* bloque button: es un bloque porque es algo que tendremos repartido por toda nuestra web */
+.button {
+    border-radius: 0.4em;
+    padding: 0.4em 1em;
+    border: none;
+}
+
+.button--blue,
+.button--red,
+.button--orange{
+    color: #fff;
+}
+.button--blue{
+    background-color: royalblue;
+}
+
+.button--red{
+    background-color: firebrick;
+}
+
+.button--orange{
+    background-color: orange;
+}
+
+.button--ghost-blue,
+.button--ghost-red,
+.button--ghost-orange{
+    background-color: transparent;
+    border: 1px solid currentColor;
+}
+
+.button--ghost-blue{
+    color: royalblue;
+}
+.button--ghost-red {
+    color: firebrick;
+}
+
+/* Si ahora aparece un nuevo button veremos que es mucho más escalable */
+
+.button--ghost-orange {
+    color: orange;
+}
+
