@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    background-color: #222;
+    color: purple;
+    font-family: sans-serif;
+}
+
+@media print {
+    body{
+        color: red;
+    }
+}

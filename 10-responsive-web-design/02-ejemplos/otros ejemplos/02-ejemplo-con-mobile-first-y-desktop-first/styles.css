@@ -1,0 +1,26 @@
+/* 
+    Si estamos en mobile first estos estilos (los que estan fuera de medias) 
+    son los que se aplican a mobile y es con los medias con los que se van
+    haciendo los cambios para tablet, desktop etc.
+
+    Por el contrario si tenemos el enfoque de desktop first seran estos estilos
+    los estilos que tengamos en escritorio.
+*/
+
+body{
+    text-align: center;
+    background-color: #222;
+    color: purple;
+    font-family: sans-serif;
+}
+
+/* 
+    Lo que cambia es de min-width a max-width si estamos en un enfoque mobile first
+    será min-width si estamos en desktop first sera max-width no tiene más.
+ */
+@media screen and (min-width: 768px) {
+    body{
+        background-color: #ccc;
+        color: lightseagreen;
+    }
+}

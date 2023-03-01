@@ -1,0 +1,12 @@
+/* Podemos declarar las variables en el body pero esto no es lo más recomendable */
+body{
+    --text-color: #666;
+    background-color: #ccc;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+.button,
+.link{
+    color: var(--text-color);
+}

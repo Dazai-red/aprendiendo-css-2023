@@ -1,0 +1,34 @@
+/* 
+    Un fallback es un plan b en el caso de que 
+    la variable falle.
+    No hay limite en cuanto al número de fallbacks
+    que podemos tener, pero lo normal es poner solo 
+    uno.
+    Existen navegadores que no tienen soporte 
+    para variables CSS. 
+    Hay una solución pero no es la más idonea consiste
+    en declarar el color que quieres y luego la variable.
+    La forma correcta sería haciendo uso de SASS y con un 
+    mixin y hacer que el color declarado se escriba 
+    automaticamente cada vez que queremos usar una variable
+*/
+
+:root{
+    --text-color: purple;
+    --text-color2: red;
+} 
+
+body{
+    background-color: #ccc;
+    /* Ejemplo de fallback */
+    /* color: var(--TEXT-color, var(--text-color2), blue); */
+    /* ejemplo de soporte a navegadores */
+    color: purple;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+.button,
+.link{
+    color: var(--text-color);
+}

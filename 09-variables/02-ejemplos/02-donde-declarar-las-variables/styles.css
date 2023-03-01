@@ -1,0 +1,29 @@
+/* 
+    Las variables se declarar en la raiz del documento
+    la raiz del documento NO es la etiqueta <html> esto 
+    tiene una especificidad de 1.
+    para acceder a la raiz del documento usamos la 
+    pseudoclase :root la diferencia es que la especificidad
+    de esta pseudoclase es mayor a la de html siendo esta de
+    10 por temas de buenas practicas y evitar conflictos
+    las variables globales se declaran en la pseudoclase :root 
+*/
+
+:root{
+    --text-color: #666;
+}
+
+/* html{
+    --text-color: #666;
+} */   
+
+body{
+    background-color: #ccc;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+.button,
+.link{
+    color: var(--text-color);
+}

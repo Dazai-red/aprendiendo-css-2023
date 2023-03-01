@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-color: #222;
+    color: lightcoral;
+    font-family: sans-serif;
+}
+
+/* modo claro, oscuro */
+
+@media screen and (prefers-color-scheme: light) {
+    body{
+        background-color: #ccc;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body{
+        background-color: #333;
+    }
+}
