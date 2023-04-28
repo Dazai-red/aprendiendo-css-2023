@@ -1,0 +1,98 @@
+/* 
+    Existe un tercer tipo de gradiente en CSS, visualmente muy similar al gradiente radial,
+    pero haciendo referencia a una figura cónica vista desde un plano superior, incluyendo 
+    sus sombras y brillos.
+
+    conic-gradient()
+
+    conic-gradient(color, color, ...)	Gradiente básico entre colores.
+    conic-gradient(from angle, color size, color size, ...) Gradiente indicando posición de
+    color.
+    conic-gradient(from  angle at ubicación, color size,  color size, ...) Gradiente indicando
+     ubicación del inicio.
+    conic-gradient(from  angle at ubicación, color size, color size, ...) Gradiente con posición
+    de inicio y fin.
+*/
+
+.title{
+    text-align: center;
+}
+
+[class^='box']{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 2em auto;
+}
+
+
+.box-1{
+    background-image: conic-gradient(red, darkred);
+}
+
+.box-2{
+    /* los valores por defecto son: */
+    background-image: conic-gradient(from 0deg at 50% 50%,red,darkred);
+}
+
+.box-3{
+    /* para mover desde donde empieza el degradado conico modificamos los grados en deg */
+    background-image: conic-gradient(from 180deg at 50% 50%,red,darkred);
+}
+
+
+
+.box-4{
+    /* en vez de utilizar grados podemos utilizar turn que son vueltas */
+    background-image: conic-gradient(from 1.5turn at 50% 50%,red,darkred);
+}
+
+.box-5{
+    background-image: conic-gradient(from 50deg at 20% 20%,red,darkred);
+}
+
+.box-6{
+    background-image: conic-gradient(from 135deg at 0% 1%,green,black);
+}
+
+.box-7{
+    background-image: conic-gradient(from 0turn at 0% 50%,green,red,blue,black);
+}
+
+.box-8{
+    background-image: conic-gradient(from 0deg at 50% 50%,green,red,blue,black);
+}
+
+/* Combinando varios degradados diferentes */
+
+.box-9{
+    background-image: 
+    linear-gradient(-45deg,black, transparent),
+    radial-gradient(circle at 100% 0%, blue, transparent),
+    conic-gradient(from 0turn at 0% 50%, green, red, blue, black);
+}
+
+/* repitiendo degradados */
+
+.box-10{
+    background-image: 
+    repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        green 0 10deg,
+        red 10deg 20deg,
+        blue 20deg 30deg);
+}
+
+/* Se producen dientes de sierra, para quitarlos aumentamos
+ los valores de los grados en los colores */
+
+ .box-11{
+    background-image: 
+    repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        darkred 0 0.5deg,
+        white 1deg 10deg,
+        red 10.5deg 20deg,
+        darkred 20.5deg 30deg);
+
+}

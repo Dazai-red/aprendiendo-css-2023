@@ -1,0 +1,58 @@
+:root{
+    --bg: #1e2345;
+    --violet: rgb(161,132,240);
+    --pink: #d60087;
+    --turquoise: #2fdabd;
+    font-size: 10px;
+}
+
+body{
+    font-family: "Fredoka One", cursive;
+    background-color: var(--bg);
+}
+
+h1{
+    margin: 0;
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
+.gradient-text{
+    background-image: linear-gradient(45deg, var(--violet), var(--turquoise));
+    /* agregamos el color en caso de que algun navegador no soporte las 2 propiedades de abajo */
+    background-color: var(--violet);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.box{
+    background-color: var(--bg);
+    padding: 6rem;
+    height: calc(100vh - 27rem);
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+.gradient-border{
+    background: linear-gradient(45deg, var(--violet), var(--turquoise));
+    background-repeat: repeat;
+    padding: 2rem;
+    margin: 5rem;
+    border-radius: 1.5rem;
+    animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -80rem 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+}

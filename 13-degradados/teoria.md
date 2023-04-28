@@ -31,10 +31,34 @@ linear-gradient: linear-gradient(red 50%, blue 50% 70%, green 75%)
 
 ## Degradados radiales
 
+Funcionan de una forma similar a los degradados líneales.
+
+background-image: radial-gradient([shape], red, blue);
+background-image: radial-gradient(red, blue);
+
+Por defecto, shape se ajustará al tamaño de la caja, pero podemos establecer si queremos un
+circulo o una elipse y definir el radio o los radios.
+
+background-image: radial-gradient(circle 100px, red, blue);
+background-image: radial-gradient(elipse 100px 50px, red, blue);
+
+Si no establecemos un punto de origen, el punto 0 0 será el centro del elemento. Para establecer
+el punto de origen podemos hacerlo en medidas o con palabras clave.
+Con la palabra "at" establecemos el punto de origen. Los valores que acepta son:
+top | right | bottom | left | center | clossets-side | closet-corner | farthest-side | 
+farthest-corner
+
+background-image: radial-gradient(circle 100px at top left, red 50%, blue 50%);
+
+si establecemos un solo valor, el segundo por defecto será center.
+
+background-image: radial-gradient(circle 100px at top, red 50%, blue 50%)
+
+Algunos enlaces de interes:
+
+https://uigradients.com/
+
 https://developer.mozilla.org/es/docs/Web/CSS/gradient
 
-http://rarup777.github.io/DIWEB/Practica7/Degradados.html
+https://lenguajecss.com/css/gradientes/conic-gradient/
 
-https://www.youtube.com/shorts/U7HTX-CLOUc bordes con degradados
-
-sombras con degradados https://www.youtube.com/watch?v=P53OTmmiscI

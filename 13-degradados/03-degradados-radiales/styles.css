@@ -1,0 +1,74 @@
+.title{
+    text-align: center;
+}
+
+[class^='box']{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 2em auto;
+}
+
+.box-1{background-image: radial-gradient(red, blue)}
+
+/* 
+    shape es la forma del degradado aqui podemos establecer si es un circulo o una
+    elipse con: circle o ellipse y también podemos designar un centro la forma más
+    sencilla sería con circulo y el valor de radio de ese circulo esto sería un 
+    circulo que ocupa 100px y apartir de ahí pues ya se iria degradando a azul
+*/
+
+.box-2{background-image: radial-gradient(circle 100px, red, blue)}
+
+/* 
+    para poner paradas usamos % despues del color
+*/
+
+.box-3{background-image: radial-gradient(circle 100px, red 50%, blue 50%)}
+
+.box-4{background-image: radial-gradient(circle 50px, red 50%, blue 50%)}
+
+/* 
+    Si no se establece un punto de origen el punto 0 0 será el centro del elemento
+    funciona exactamente igual que background position pero podemos establecer
+    desde donde queremos que empiece para eso tenemos la palabra at.
+
+    Lo más normal es utilizar: top | right | bottom | center despues existen
+    estos 4 valores que no se suelen utilizar: 
+    closest-side | closest-corner | farthest-side | farthest-corner
+
+*/
+
+.box-5{background-image: radial-gradient(circle 100px at top, red 50%, blue 50%)}
+
+.box-6{background-image: radial-gradient(circle 100px at top left, red 50%, blue 50%)}
+
+/* 
+    Si queremos hacer una ellipse y ponemos solo un radio nos aparece un error (no se dibuja)
+    Cuando queremos hacer una ellipse necesitamos dos radios.
+
+*/
+
+
+.box-7{background-image: radial-gradient(ellipse 100px 50px, red 50%, blue 50%)}
+
+/* el at funcionaria exactamente igual */
+
+.box-8{background-image: radial-gradient(ellipse 100px 50px at bottom right, red 50%, blue 50%)}
+
+.box-9{background-image: radial-gradient(ellipse 100px 50px at bottom, red 50%, blue 50%)}
+
+.box-10{background-image: radial-gradient(ellipse 200px 50px at bottom, red 50%, blue 50%)}
+
+/* Con esto podriamos jugar con transparent para conseguir diferentes efectos en las cajas */
+
+.box-11{
+    border: none;
+    background-image: radial-gradient(ellipse 200px 50px at bottom, transparent 50%, blue 50%)
+}
+
+/* 
+    Existen otros dos valores para background-image: repeat-linear-gradient y 
+    repeating radial-gradient que es para dibujar patrones que no tenemos que calcular nosotros
+*/
+

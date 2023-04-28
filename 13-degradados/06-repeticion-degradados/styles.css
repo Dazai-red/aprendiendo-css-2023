@@ -1,0 +1,52 @@
+.title{
+    text-align: center;
+}
+
+[class^='box']{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 2em auto;
+}
+
+/* 
+    Lo primero es poner la palabra repeating- deleante de linear o radial gradient
+    
+    Establecemos las paradas de una forma sencilla.
+
+    Lo que tenemos que hacer es establecer la primera parte del patron y CSS va a 
+    calcular el resto de medidas.
+
+    En este ejemplo red empieza desde 0 y luego le indicamos hasta donde llega el rojo.
+    Despues le decimos el color 2 que en este caso es el azul y le decimos donde queremos
+    que empiece en este caso queremos que sea completamente solido por lo que le decimos
+    que va a empezar exactamente en el punto en el que termina el primer color (red) que son
+    10px y luego le indicamos hasta donde tiene que llegar el azul en este caso le indicamos
+    20px para que sean franjas de 10px.
+
+    Ahora podemos poner los grados que queramos que automaticamente se va a calcular
+    sin que nosotros tengamos que hacer ningun calculo.
+
+    Lo más comun es hacer cortes solidos en estos casos ponemos 4 cortes si son dos colores
+    si no queremos que sea solido con poner 2 cortes lo que hara será hacer un degradado.
+
+    Con radial funciona exactamente igual lo unico que cambia es que tenemos que establecer
+    el radio del circulo o de la elipse con dos radios.
+
+*/
+
+.box-1{
+    background-image: repeating-linear-gradient(30deg,
+        red 0,
+        red 10px,
+        blue 10px,
+        blue 20px);
+}
+
+.box-2{
+    background-image: repeating-radial-gradient(circle 20px,
+        red 0,
+        red 10px,
+        blue 10px,
+        blue 20px);
+}
