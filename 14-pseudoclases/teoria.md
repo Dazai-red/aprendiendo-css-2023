@@ -12,3 +12,5 @@ Su sintaxis es:
         estilos
     }
 ```
+
+Más información https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes

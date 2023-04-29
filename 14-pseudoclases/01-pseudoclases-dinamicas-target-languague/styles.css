@@ -1,0 +1,101 @@
+/* 
+    Pseudoclases dinámicas
+    Las que tienen (links) significa que solo se pueden aplicar a enlaces.
+        :link (links) - Link no visitado
+        :visited (links) - link visitado
+        :hover - al poner el mouse sobre el elemento
+        :active (links) - El momento del click
+        :focus -lCuando el elemento tiene el foco
+    
+    Target
+        :target - Elemento es objetivo de un marcador o ancla
+
+    Languague
+        :lang() - Elemento que contiene el atributo lang que especifiquemos
+*/
+
+.link:link{
+    color: red;
+}
+
+/* 
+    Esta pseudoclase no se suele utiulizar en páginas web 
+    suele quedar bastante feo.Se suele utilizar en buscadores 
+    como google 
+*/
+
+.link:visited{
+    color: chartreuse;
+}
+
+.link:active{
+    /* justo al hacer click antes de soltar en esa fracción de segundo en la que hacemos click*/
+    color: cyan;
+    background-color: red;
+}
+
+.button{
+    text-decoration: none;
+    display: inline-block;
+    background: red;
+    padding: .5em;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.button:active{
+    /* la escala normal es 1 simulamos que estamos haciendo click en el botón
+    es de los que más se utiliza en botones */
+    transform: scale(.9);
+}
+
+.button:hover{
+    color: red;
+    background: #fff;
+    border: 1px solid;
+}
+
+.title{
+    margin-top: 100px;
+}
+
+.title:hover{
+    color: blueviolet;
+}
+
+.input:focus{
+    background: green;
+}
+
+.paragraph{
+    margin-top: 1000px;
+    padding-bottom: 1000px;
+}
+
+.menu{
+    background-color: lightblue;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.paragraph:target{
+    padding-top: 75px;
+}
+
+.span{
+    display: block;
+}
+
+.span:lang(en){
+    color: blue;
+}
+
+.span:lang(es){
+    color: red;
+}
