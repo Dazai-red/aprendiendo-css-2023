@@ -1,0 +1,110 @@
+/* 
+    Structural
+        :root - Representa la raiz del documento (html) usando una pseudoclase tenemos más especificad que si usaramos
+        la etiqueta html, se suele usar para almacenar variables CSS.
+
+        :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido.
+
+        -child
+            :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+            
+            :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+
+            :nth-child() - Selecciona al hijo n (independientemente del tipo de etiqueta)
+            
+            :nth-last-child() Selecciona al hijo n empezando a contar desde el último 
+            independientemente del tipo de etiqueta)
+
+            :only-child Selecciona al hijo unico (independientemente del tipo de etiqueta)
+
+        -type
+            (todas funcionan igual que child pero con la diferencia de que tienen que ser el mismo tipo de etiqueta)
+            :first-of-type
+            :last-of-type
+            :nth-of-type()
+            :nth-last-of-type()
+            :only-of-type 
+
+        Valores posibles: 
+            odd - Impares
+            even - Pares
+            numeros enteros - 2,3,4...
+            equaciones (1n,3n,4n+1,n+4,...)
+                n es un multiplicador va de 0 hasta que se quede sin elementos como los bucles en programación
+
+    negation
+        :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+
+
+
+*/
+
+:root {
+    --bg: #f49c14;
+}
+
+.variable{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: var(--bg);
+    margin: 0 auto;
+}
+
+.paragraph{
+    padding: .5em;
+    background-color: lightblue;
+}
+
+/* Esto viene bien para cuando trabajamos con un css que nos genere parrafos y alguno este vacio */
+
+.paragraph:empty{
+    /* padding: 0; */
+    /* otra forma de arreglarlo sería con la propieda all para resetear todas las propiedades menos direction y unicode-vdi  */
+    all: unset;
+    /* height: 300px;
+    width: 300px;
+    display: block;
+    border: 1px solid black; */
+}
+
+/* .paragraph:first-child{
+    background-color: red;
+}
+
+.paragraph:last-child{
+    background-color: blue;
+}
+
+.paragraph:nth-child(4){
+    background-color: #f49c14;
+} */
+
+.paragraph:nth-child(3n){
+    /* n primero vale 0, despues 1, despues 2 y
+    por último 3 es decir 3*0=0 no se aplica a ninguno
+    3*1=3 se aplica al 3 3*2=6 se aplica al 6 ... */
+    background-color: lightcoral;
+}
+
+  
+/* .paragraph:nth-child(n + 4){
+    background-color: royalblue;
+} */
+/* n vale 0 +4 = 4, n vale 1+4 = 5 2+4=6 ... de forma que a partir del 4 todos los demas se pintan */
+
+/* si usamos even en last-child se invierte con los impares porque empieza a contar desde atras */
+
+/* .paragraph:nth-last-of-type(even){
+    background-color: blueviolet;
+} */
+
+
+/* Solo funciona cuando la etiqueta a la que se lo estamos aplicando es hijo unico si hay más no se aplica */
+.paragraph:only-child{
+    background-color: lightgreen;
+}
+
+.paragraph:not(p) {
+    background-color: green;
+}
