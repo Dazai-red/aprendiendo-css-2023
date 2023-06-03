@@ -1,0 +1,56 @@
+/* 
+    Pseudoelementos
+
+    Se utilizan para dar estilo a partes específicas de un elemento.
+    La sintaxis es selector::pseudoelemento{estilos}
+
+    Existen 5 pseudoelementos:
+        ::first-line (Elementos de bloque)
+        ::first-letter (Elementos de bloque)
+        ::selection
+
+        ::before
+        ::after
+            La propiedad content es obligatoria.
+            Son elementos de línea por defecto
+            Son hijos del elemento al que pertence pero 
+            no son representandos en el DOM por lo que no podemos
+            capturarlos desde JavaScript.
+
+        https://www.youtube.com/watch?v=VsYqbdBOP50 terminar este ejemplo
+*/
+
+.title::first-letter{
+    color: red;
+    font-size: 2em;
+}
+/* Si reducimos o ampliamos la ventana del navegador la primera línea
+aumenta o disminuye con esto podemos dar estilo a esa línea de fofrma dinamica */
+.text::first-line{
+    font-size: 2em;
+    color: blue;
+}
+
+.text::selection{
+    color: lime;
+    background-color: red;
+}
+
+.dolar::before{
+    content: '$';
+    user-select: all;
+}
+
+.dolar::after{
+    content: '.00';
+    user-select: all;
+}
+
+.test::before,
+.test::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
