@@ -1,0 +1,23 @@
+body{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+header{
+	background: #3B3B3B;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+header h1{
+	margin: 0;
+}
+
+main{
+	background: white;
+	width: 90%;
+	margin: auto;
+	padding: 0;
+}

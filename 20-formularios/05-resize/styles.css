@@ -1,0 +1,31 @@
+/* 
+    Resize
+        La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.
+
+        Tenemos estos posibles valores
+        
+        resize: none; el usuario no controla el cambio de tamaño del elemento.
+        resize: both; El usuario puede cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.
+        resize: horizontal;  permite al usuario cambiar el tamaño del elemento sólo horintalmente.
+        resize: vertical; permite al usuario cambiar el tamaño del elemento sólo verticalmente.
+
+        valores globales
+
+        resize: inherit;
+        resize: initial;
+        resize: unset;
+
+        Si queremos añadir resize a una caja debe de tener la propiedad oferflow en algun valor declarado
+*/
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: rebeccapurple;
+    resize: both;
+    overflow: auto;
+}
+
+.textarea{
+    resize: vertical;
+}

@@ -1,0 +1,86 @@
+input[type=radio],
+input[type=checkbox]{
+	display: none;
+}
+
+form > div > div{
+	margin-bottom: 4px;
+}
+
+#usuario span{
+	display: inline-block;
+	width: 200px;
+}
+
+#usuario label{
+	display: inline-block;
+	width: 100px;
+}
+
+#usuario input[type=radio] + label,
+#usuario input[type=checkbox] + label{
+	background: url("img/checkbox-unchecked.svg") no-repeat left center;
+	background-size: 24px 24px;
+	padding: 4px 0px 4px 30px;
+}
+
+#usuario input[type=radio]:checked + label,
+#usuario input[type=checkbox]:checked + label{
+	background-image: url("img/checkbox-checked.svg");
+}
+
+
+
+#preferencias input[type=checkbox] + label{
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	
+	font-size: 16px;
+	line-height: 16px;
+	background: url("img/switch_on_off.png") no-repeat right bottom;
+	padding: 4px 80px 4px 0;
+}
+#preferencias input[type=checkbox]:checked + label{
+	background-position: right top;
+}
+
+
+
+#cookies div{
+	display: flex;
+}
+
+#cookies div span{
+	flex: 1;
+}
+
+#cookies input[type=radio] + label{
+	padding: 5px 15px;
+	background: #fff;
+	color: #B3B3B3;
+	border: 1px solid #E5E5E5;
+	margin-left: 5px;
+}
+
+#cookies input[type=radio]:checked + label.no{
+	background: #FF5555;
+	border-color: #B23B3B;
+	color: white;
+}
+
+
+#cookies input[type=radio]:checked + label.si{
+	background: #32404E;
+	border-color: #32404E;
+	color: white;
+}
+
+
+
+
+
+
+
+
+

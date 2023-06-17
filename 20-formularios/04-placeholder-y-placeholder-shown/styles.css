@@ -1,0 +1,52 @@
+/* 
+   ::placeholder
+        El pseudo-elemento CSS ::placeholder representa el texto provisional en un elemento <input> o un elemento <textarea>.
+*/
+.text::placeholder{
+    color: red;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* 
+    
+    Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento ::first-line 
+    puede ser usado en una regla utilizando ::placeholder en su selector.
+
+    Un texto temporal con suficiente contraste puede ser interpretado como una entrada. 
+    El texto provisional podría desaparecer cuando una persona ingresa contenido en un elemento <input>.
+    Ámbas circunstancias pueden interferir con el correcto llenado de un formulario, especialmente para 
+    personas con dificultades cogniticas.
+
+    Preocupaciones por la accesibilidad
+
+    El texto temporal generalmente tiene un color más claro para indicar que es una sugerencia 
+    para el tipo de entrada que será válido, y no es una entrada real de cualquier tipo.
+
+    Es importante asegurarse que el radio de contraste entre el color del texto provisional y el fondo de la entrada es lo suficientemente 
+    alto para que las personas que experimenten condiciones de visión baja sean capaces de leer el texto mientras también asegurarse que hay
+    diferencia suficiente entre el color del texto temporal y el color del texto de entrada para que los usuarios no confundad el texto
+    provisional con la información de ingreso.
+
+*/
+
+/* 
+    :placeholder-shown
+        La pseudo-clase (en-US) :placeholder-shown de CSS representa cualquier elemento <input> o <textarea> que esté mostrando actualmente
+        el texto de marcador de posición (placeholder).
+
+    En pantallas angostas como teléfonos inteligentes, el ancho de los cuadros de búsqueda y otros campos de formulario pueden acortarse 
+    drásticamente. Esto puede provocar que el texto de marcador de posición se recorte de una manera no deseada. A menudo es útil alterar 
+    este comportamiento con la propiedad text-overflow.
+
+*/
+
+.text{
+    border: 2px solid black;
+    padding: 3px;
+}
+
+.text:placeholder-shown {
+    border: 2px solid silver;
+    text-overflow: ellipsis;
+}

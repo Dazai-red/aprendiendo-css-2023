@@ -1,0 +1,119 @@
+/* 
+    Normalmente necesitamos resetear los estilos por defecto de una lista
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+
+    Existen 3 propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista: 
+
+        list style type: establece el estilo de la viñeta tiene estos posibles valores
+            disc (valor por defecto)
+            circle
+            square
+            decimal 
+            decimal-leading-zero
+            lower-roman
+            upper-roman
+            lower-greek
+            lower-latin
+            upper-latin
+            armenian
+            georgian
+            lower-alpha (solo funciona si tenemos teclado con alfabetos diferentes: chino, coreano, ruso etc)
+            upper-alpha (solo funciona si tenemos teclado con alfabetos diferentes: chino, coreano, ruso etc)
+
+
+        list style position: posiciona las viñetas por dentro o por fuera de un elemento
+            outside | inside
+        
+        list style image: Pone una imagen en lugar de una viñeta, no se suele utilizar porque
+        hay formas mucho más eficientes de hacerlo tiene el problema de que no podemos modificar el
+        tamaño de la imágen por eso es mejor usar pseudoelemento ::before o background
+            url(imagen)
+
+        Normalmente se suele usar el shorthand list-style
+
+    Pseudo elemento ::marker
+        El pseudo-elemento ::marker en CSS selecciona la caja de marcadores de un elemento de la lista,
+        que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento 
+        configurado para display: list-item, como el elemento <li> y <summary>.
+
+        Sólo ciertas propiedades CSS puedes utilizarse en una regla con ::marker como selector:
+
+        -Todas las propiedades de fuentes
+        -color
+        -La propiedad text-combine-upright, unicode-bidi y direction
+        -La propiedad content
+*/
+
+/* ul li::marker {
+  color: red;
+  font-size: 1.5em;
+} */
+
+
+/* .list{
+    list-style: disc;
+    list-style: square;
+    list-style: decimal-leading-zero;
+} */
+
+/* .list{
+    list-style-image: url(check.png);
+} */
+
+.list{
+    /* list-style-type: none; */
+    /* background-color: royalblue; */
+    list-style: armenian;
+}
+/* Esta sería una forma de hacerlo con :before */
+/* .list__item::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(check.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+} */
+
+/* esta seria una forma de hacerlo con background, se queda más centrado y se usa menos código */
+.list__item {
+    /* background-image: url(check.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat; */ 
+    /* usando el shorthand background  */
+    /* background: url(check.png) 0 0 / contain no-repeat;  */
+    /* padding-left: 2em; */
+    /* background-color: red; */
+}
+
+.list__item::marker{
+    content: '+ ';
+    color: aqua;
+    font-family: sans-serif;
+    text-shadow: 2px 2px black;
+    font-weight: bolder;
+    font-size: 2em;
+    background-color: red;
+    
+}
+
+/* En el 90% de las ocasiones vamos a utilizar esto para resetear las listas */
+
+/* .list{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+ */
+/* la forma más fácil de hacer un menú sin flexbox */
+/* .list__item{
+    float: left;
+    padding-right: 1em;
+} */

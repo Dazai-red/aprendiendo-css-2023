@@ -11,3 +11,6 @@ https://developer.mozilla.org/es/docs/Web/CSS/:placeholder-shown
 https://developer.mozilla.org/en-US/docs/Web/CSS/resize
 
 https://www.youtube.com/watch?v=JpaSz6XUtaw
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range

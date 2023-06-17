@@ -1,0 +1,95 @@
+/* 
+    No existen propiedades para imágenes en CSS
+    1. Imágenes responsive. En el archivo de reset de CSS se recomienda poner esta regla: 
+        img{
+            max-width: 100%
+        }
+
+    2. Las imágenes por defecto son elementos inline, esto cause un espacio por debajo debido
+    a su line-height, se puede solucionar de dos formas: 
+        1 Dando un display: block a la imágen (lo más normal es usar esto) 
+        2 Dando un line-height: 0 a su contenedor.
+
+    3. Centrado horizontal dos formas: 
+        1 Imágen con display: block y márgenes laterales automáticos
+        2 imágen con display por defecto usando un text-aling center al contenedor
+
+    4. Centrado vertical 3 opciones
+    Flexbox (la mejor opción)
+    vertical-align: middle ala imagen y al texto
+    display table 
+*/
+
+/* La forma de hacer responsive a una imágen */
+.img{
+    max-width: 100%;
+    height: 100%;
+}
+
+
+/* para controlar el ancho y alto de las imágenes se suelen colocar dentro de un div */
+.img-container{
+    height: 400px;
+    /* width: 400px; */
+    margin-bottom: 15px;
+    /* background-color: red; */
+    
+}
+
+/* quitar espacio debajo */
+
+.img--mountain{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container--beach{
+    line-height: 0;
+    /* background-color: peru; */
+    text-align: center;
+}   
+
+img[class^='logo']{
+    max-width: 100%;
+    width: 75px;
+    height: 75px;
+    /* display: block; */
+}
+
+.card-container-1{
+    text-align: center;
+    background-color: purple;
+}
+
+/* esto tiene un problema y es que si la ventana se reduce la 
+siguiente linea de texto baja cuando tenemos una sola linea este 
+truco funciona pero cuando tenemos más de una*/
+
+.card-container-1 img,
+.card-container-1 span{
+    vertical-align: middle;
+}
+
+/* otra forma de hacerlo  */
+
+.card-container-2 {
+    display: table;
+    background-color: lavender;
+    width: 100%;
+}
+
+.card-container-2 img, 
+.card-container-2 span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Con flexbox la ventaja es que se adapta respecto al tamaño disponible es algo
+que no tenemos que controlar nosotros. Por eso es la más utiliza */
+
+.card-container-3{
+    display: flex;
+    align-items: center;
+    background-color: green;
+}

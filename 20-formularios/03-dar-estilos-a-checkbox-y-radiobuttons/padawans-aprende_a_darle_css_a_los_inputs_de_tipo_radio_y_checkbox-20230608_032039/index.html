@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+	<link href="estilos.css" rel="stylesheet" />
+	<link href="inputs.css" rel="stylesheet" />
+ 	<title>Fancy Radio / Checkbox</title>
+</head>
+<body>
+	<header>
+		<h1>Fancy Radio / Checkbox</h1>
+	</header>
+	
+	<main>
+		<h2>Settings</h2>
+		<p>Configure el comportamiento del sitio web</p>
+		<form method="post" action="#">
+			<h3>Usuario</h3>
+			<div id="usuario">
+				<div>
+					<span>Zona Horaria</span>
+
+					<input type="radio" name="zona_horaria" id="zona_horaria_arg" value="Argentina" />
+					<label for="zona_horaria_arg">Argentina</label>
+
+					<input type="radio" name="zona_horaria" id="zona_horaria_usa" value="USA" />
+					<label for="zona_horaria_usa">USA</label>
+
+					<input type="radio" name="zona_horaria" id="zona_horaria_esp" value="España" />
+					<label for="zona_horaria_esp">España</label>
+				</div>
+				
+				<div>
+					<span>Pestañas del sitio</span>
+
+					<input type="checkbox" name="tabs[]" id="tab_videos" value="Videos" />
+					<label for="tab_videos">Videos</label>
+
+					<input type="checkbox" name="tabs[]" id="tab_fotos" value="Fotos" />
+					<label for="tab_fotos">Fotos</label>
+
+					<input type="checkbox" name="tabs[]" id="tab_acerca" value="Acerca" />
+					<label for="tab_acerca">Acerca de...</label>
+
+					<input type="checkbox" name="tabs[]" id="tab_contacto" value="Contacto" />
+					<label for="tab_contacto">Contacto</label>
+				</div>
+			</div>
+				
+			<h3>Preferencias</h3>
+			<div id="preferencias">
+				<div>
+					<input type="checkbox" id="modo_oscuro" name="modo_oscuro" />
+					<label for="modo_oscuro">Modo oscuro</label>
+				</div>
+
+				<div>
+					<input type="checkbox" id="notificaciones" name="notificaciones" />
+					<label for="notificaciones">Recibir notificaciones</label>
+				</div>
+			</div>
+
+			
+			<h3>Cookies</h3>
+			<div id="cookies">
+				<div>
+					<span>Compartir tu análisis de navegación y grupos de interés</span>
+
+					<input type="radio" name="analisis" id="analisis_no" value="no" />
+					<label for="analisis_no" class='no'>&cross; Rechazar</label>
+					
+					<input type="radio" name="analisis" id="analisis_si" value="si" />
+					<label for="analisis_si" class='si'>&check; Aceptar</label>
+				</div>
+
+				<div>
+					<span>Acceso y almacenamiento de datos</span>
+
+					<input type="radio" name="datos" id="datos_no" value="no" />
+					<label for="datos_no" class='no'>&cross; Rechazar</label>
+					
+					<input type="radio" name="datos" id="datos_si" value="si" />
+					<label for="datos_si" class='si'>&check; Aceptar</label>
+				</div>
+
+				<div>
+					<span>Selección, suministro e informe de anuncios</span>
+
+					<input type="radio" name="anuncios" id="anuncios_no" value="no" />
+					<label for="anuncios_no" class='no'>&cross; Rechazar</label>
+					
+					<input type="radio" name="anuncios" id="anuncios_si" value="si" />
+					<label for="anuncios_si" class='si'>&check; Aceptar</label>
+				</div>
+			</div>
+			
+			<div>
+				<input type="submit" value="Guardar cambios" />
+			</div>
+		</form>
+	</main>
+</body>
+</html>

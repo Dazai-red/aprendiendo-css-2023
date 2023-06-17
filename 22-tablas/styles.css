@@ -1,0 +1,69 @@
+/* 
+    table-layout: Define como se comportan las dimensiones de una tabla y los anchos de las "columnas" tiene los siguientes valores: 
+        automatic: Los anchos de la tabla y sus celdas se ajustan para adaptarse al contenido.
+        fixed: necesita un width declarado, si no se le da un ancho a cada columna se distrubuyen equitativamente. 
+
+        caption-side: define donde se coloca el caption de una tabla.
+            top (por defecto)
+            bottom 
+
+        border-spacing: controla el espacio entre las celdas y recibe una medida en cualquier unidad
+        border-collapse: controla si las celdas se mantienen juntas o separadas.
+            separate: valor por defecto
+            collapse: junta las celdas para que esten todas juntas (con esto vemos la tabla como se suelen ver)
+
+        empty-cells controla que hacer con las celdas vacías
+            show: valor por defecto
+            hide: oculta las celdas vacías (si existe un border-collapse con valor collapse no funciona)
+
+        Para hacer una tabla responsive necesitamos un div que encierre a la tabla al que darle overflow-x: auto
+        existen otras formas con flexbox.
+*/
+
+/* .table{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+} */
+
+/* .table{
+    caption-side: bottom;
+} */
+
+/* .table{
+    border-spacing: 3em;
+} */
+/* Para ver mejor como funciona border-spacing poner un border */
+/* NO poner nunca en html en la tabla border="1" esto esta obsoleto desde hace años */
+.table,
+.table__caption, 
+.table__head, 
+.table__data{
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+.table__caption{
+    border-bottom: none;
+}
+
+/* con esto conseguimos el aspecto normal de una tabla */
+.table{
+    border-collapse: collapse;
+}
+
+/* .table{
+    empty-cells: hide;
+} */
+
+/* Hacer una tabla responsive */
+
+.table{
+    width: 100%;
+    text-align: center;
+}
+
+.table-container{
+    overflow-x: auto;
+}
+

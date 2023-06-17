@@ -1,0 +1,68 @@
+/* No trabajamos con los inputs como tal, trabajamos con los labels */
+
+form > div > label{
+    margin-bottom: 5px;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    display: none;
+}
+
+
+
+/* label justo despues del inputradio, cambiando la imágen dependiendo de si checked o no*/
+.leisure input[type=checkbox] + label,
+.civilStatus input[type=radio] + label {
+    background: url("img/checkbox-unchecked.svg") no-repeat left center;
+    background-size: 24px 24px;
+    padding: 4px 0 4px 30px;
+}
+
+.leisure input[type=checkbox]:checked + label,
+.civilStatus input[type=radio]:checked + label {
+    background-image: url("img/checkbox-checked.svg");
+}
+
+/* En este caso como trabajamos con una unica imágen hacemos cambios en el backgroundposition */
+
+.preferences input[type=checkbox] + label {
+    box-sizing: border-box;
+    display: block;
+    background: url("img/switch_on_off.png") no-repeat right bottom;
+    padding: 4px 80px 4px 0;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.preferences input[type=checkbox]:checked + label {
+   background-position: right top;
+}
+
+.cookies div {
+    display: flex;
+}
+
+.cookies div span{
+    flex: 1;
+}
+
+.cookies input[type=radio] + label {
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #B3B3B3;
+    border: 1px solid #E5E5E5;
+    margin-left: 5px;
+}
+
+.cookies input[type=radio]:checked + label.no{
+    background-color: #FF5555;
+    border-color: #B23B3B;
+    color: white;
+}
+
+.cookies input[type=radio]:checked + label.si{
+    background-color: #32404E;
+    border-color: #32404E;
+    color: white;
+}

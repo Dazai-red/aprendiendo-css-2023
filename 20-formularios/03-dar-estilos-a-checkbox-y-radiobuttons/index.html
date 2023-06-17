@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inputs.css">
+    <title>Dar estilos a checkbox y radiobuttons</title>
+</head>
+<body>
+    <form>
+        <h1>Dar estilos a checkbox y radiobuttons</h1>
+        <h2>Estado civil</h2>
+        <div class="civilStatus">
+            <input type="radio" name="civilStatus" id="single">
+            <label for="single">Solter@</label>
+            <input type="radio" name="civilStatus" id="married">
+            <label for="married">Casad@</label>
+            <input type="radio" name="civilStatus" id="widowed">
+            <label for="widowed">Viudo@ </label>
+            <input type="radio" name="civilStatus" id="divorced">
+            <label for="divorced">Divorciad@</label>
+        </div>
+        <h2>Ocio</h2>
+        <div class="leisure">
+            <input type="checkbox" name="sports" id="sportsCheckbox">
+            <label for="sportsCheckbox">deportes</label>
+            <input type="checkbox" name="read" id="readCheckbox">
+            <label for="readCheckbox">lectura</label>
+            <input type="checkbox" name="videogames" id="videogamesCheckbox">
+            <label for="videogamesCheckbox">videojeugos</label>
+            <label for="fashionCheckbox">moda</label>
+            <input type="checkbox" name="fashion" id="fashionCheckbox">
+        </div>
+        <h2>Preferencias</h2>
+        <div class="preferences">
+            <input type="checkbox" name="darkmode" id="darkmode">
+            <label for="darkmode">modo oscuro</label>
+            <input type="checkbox" name="clearmode" id="clearmode">
+            <label for="clearmode">modo claro</label>
+        </div>
+        <h2>Cookies</h2>
+        <div class="cookies">
+            <div>
+                <span>Compartir tu ánalisis de navegación y grupos de interés</span>
+                <input type="radio" name="analisis" id="analsis_no" value="no">
+                <label for="analsis_no" class="no">&cross; Rechazar</label>
+                <input type="radio" name="analisis" id="analisis_si" value="si">
+                <label for="analisis_si" class="si">&check; Aceptar</label>
+            </div> 
+        </div>
+    </form>
+</body>
+</html>
