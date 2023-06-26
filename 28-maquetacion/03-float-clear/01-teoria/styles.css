@@ -1,0 +1,89 @@
+/* 
+    float: ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado.
+    El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).
+
+    tenemos 4 posibles valores: none, left, right, inherit
+
+    clear: especifica si un elemento puede estar al lado de elementos flotantes que lo preceden o si debe ser movido (cleared) debajo de ellos.
+    La propiedad clear aplica a ambos elementos flotantes y no flotantes.
+
+    tenemos 4 posibles valores: none, left, right, both
+
+    Cuando es aplicado a bloques no flotantes, mueve el border edge  del elemento hacia abajo hasta que este debajo del margin edge 
+    de todos los floats relevantes. Este movimiento (cuando acontece) causa que margin collapsing no ocurra.
+
+    Cuando se aplica a elementos flotantes, mueve el margin edge del elemento debajo del margin edge de todos los floats relevantes. 
+    Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.
+
+    Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo contexto de formato de bloque.
+
+    Nota: Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor 
+    también o usar clear en un pseudo-element ::after.
+
+    #container::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    https://developer.mozilla.org/es/docs/Web/CSS/float
+    https://developer.mozilla.org/es/docs/Web/CSS/clear
+
+*/
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(70, 174, 248);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px dotted black;
+}
+
+div[class^='box-']{
+    background-color: rgb(212, 103, 212);
+    width: 300px;
+    height: 300px;
+}
+
+.box-0{
+    float: left;
+    /* La caja se posicióna a la izquierda y el texto a la derecha dejandole espacio a la caja */
+}
+
+
+
+.box-1{
+    float: right;
+    /* La caja se posicióna a la derecha y el texto a la derecha dejandole espacio a la caja */
+}
+
+.box-2{
+    float: right;
+}
+
+.paragraph-2{
+    clear: right;
+    /* entiende que hay un elemento flotante encima y respeta su espacio siempre que el elemento flotante este posicionado a la izquierda */
+    /* si a box-2 le cambiamos el float a left clear right no actuaria */
+}
+
+.box-3{
+    float: left;
+}
+
+.paragraph-3{
+    clear: left;
+    /* entiende que hay un elemento flotante encima y respeta su espacio siempre que el elemento flotante este posicionado a la derecha */
+    /* si a box-2 le cambiamos el float a left clear right no actuaria */
+}
+
+.box-4{
+    float: left;
+}
+
+.paragraph-4{
+    clear: both;
+    /* entiende que hay un elemento flotante encima y respeta su espacio en ambos lados */
+}

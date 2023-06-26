@@ -1,0 +1,217 @@
+/* 
+    filter: 
+        none
+        blur(px): desenfoca la imagen
+        brightness(%): Ajusta el brillo de la imagen siendo 1 el original. De 0 a 1 dan oscuridad y de 1 a dan sobreexposición.
+        contrast(%): Ajusta el contraste de la imagen siendo 1 el original. De 0 a es negro y de 1 a n dan más contraste.
+        drop-shadow(h-shadow v-shadow blur spread color): Aplica una sombra paralela a la imagen.
+        grayscale(%): Convierte la imagen a escala de grises, 0 es el original y 1 sería blanco y negro completamente.
+        hue-rotate(deg): Añade matiz de color a la imagen. Se da un valor en grados según la rueda cromática. El valor máximo es 360deg
+        invert(%): Invierte el color de la imagen. Saca negativo. 0 es el valor por defecto y 1 es totalmente invertida.
+        opacity(%): Controla la opacidad de la imagen. 1 es el valor por defecto, 0 es totalmente desaturada y por encima de 1 se sobresatura.
+        saturate(%): Controla la saturación de la imagen. 1 es el valor por defecto 0 es tutalmente desaturada y por encima de 1 se sobresatura.
+        sepia(%): Aplica un tono sepia a la imagen. 0 es el valor por defecto y 1 es totalmente sepia.
+*/
+
+p{
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+/* efecto de desenfoque */
+
+.picture-1{
+    filter: blur(5px);
+}
+
+.picture-1:hover{
+    filter: none;
+}
+
+/* con .5 da la sensación de que hemos usado un opacity pero realmente la ha oscurecido */
+
+.picture-2{
+    filter: brightness(.5);
+}
+
+.picture-3{
+    filter: brightness(.3);
+}
+
+/* Podemos llegar a dejarlo en negro colocando 0 */
+
+.picture-4{
+    filter: brightness(0);
+}
+
+.picture-5{
+    filter: brightness(2);
+}
+/* Podemos llegar a quemar la foto (dejarla completamente blanca) */
+.picture-6{
+    filter: brightness(100);
+}
+
+.picture-6{
+    filter: brightness(100);
+}
+
+
+/* contraste */
+
+.picture-7{
+    filter: contrast(0);
+    /* tenemos un gris */
+}
+
+/* tenemos la imágen original */
+.picture-8{
+    filter: contrast(1);
+}
+
+.picture-9{
+    filter: contrast(8);
+    /* si vamos subiendo sobrecontrastando la imágen */
+}
+
+
+.picture-10{
+    filter: drop-shadow(10px 10px 5px black);
+    
+    /* la sombra horizontal,sombra vertical, desenfoque, extensión de la sombra, color de la sombra */
+    /* la extensión de la sombra o spreed no esta soportado en todos los navegadores */
+}
+
+
+.picture-11{
+    filter: drop-shadow(-10px -10px 10px black);
+    
+    /* la sombra horizontal,sombra vertical, desenfoque, extensión de la sombra, color de la sombra */
+    /* la extensión de la sombra o spreed no esta soportado en todos los navegadores */
+}
+
+/* grayscale convertir la imagen en escala de grises */
+
+.picture-12{
+    filter: grayscale();
+    /* si no ponemos nada pinta de gris la imagen */
+}
+
+.picture-13{
+    filter: grayscale(0);
+    /* deja la foto por defecto */
+}
+
+.picture-14{
+    filter: grayscale(.5);
+    /* la mitad de lo gris que se puede poner */
+}
+
+.picture-15{
+    filter: grayscale(1);
+    /* 1 es como no poner nada deja la imagen gris completamente */
+}
+
+.picture-16{
+    filter: hue-rotate(45deg);
+    /* nos tenemos que fijar en la rueda cromatica y poner el valor en grados desde 0 a 360 */
+    /* hay que tener en cuenta que los colores de la propia foto influyen en como se vea  */
+    /* en este caso aplica un amarillo por encima de la foto */
+}
+
+
+.picture-17{
+    filter: hue-rotate(90deg);
+    /* en este caso aplica un verde azulado */
+}
+
+.picture-18{
+    filter: hue-rotate(90deg);
+    /* en este caso aplica un morado */
+}
+
+.picture-19{
+    filter: invert(0);
+    /* ponemos la foto tal cual */
+}
+
+.picture-20{
+    filter: invert(.5);
+    /* ponemos la foto en gris */
+}
+
+.picture-21{
+    filter: invert(.3);
+    /* si ponemos un valor más bajo nos acercamos más a los colores originales de la foto */
+}
+
+.picture-22{
+    filter: invert(.7);
+    /* si ponemos un valor más alto nos acercamos más a la foto invertida completamente */
+}
+
+.picture-23{
+    filter: opacity(0);
+    /* seria la foto completamente transparente */
+}
+
+.picture-24{
+    filter: opacity(1);
+    /* seria la foto sin nada de transparencia */
+}
+
+.picture-25{
+    filter: opacity(.5);
+    /* seria la foto con la mitad de transparencia */
+}
+
+.picture-26{
+    filter: saturate(1);
+    /* controla la saturación de la imagen el valor por defecto es 1 que seria la foto tal cual*/
+}
+
+.picture-27{
+    filter: saturate(0);
+    /* si ponemos 0 seria la foto completamente saturada, 
+    no es lo mismo que blanco y negro pero a efectos practicos
+     seria el mismo efecto que grey scale*/
+}
+
+.picture-28{
+    filter: saturate(2);
+    /* si nos pasamos de 1 conseguimos una sobresaturación de la foto*/
+}
+
+.picture-29{
+    filter: sepia(0);
+    /* si ponemos 0 tenemos la foto tal cual*/
+}
+
+.picture-30{
+    filter: sepia(1);
+    /* si ponemos 1 tenemos una foto con filtro sepia, el valor máximo es 1*/
+}
+
+.picture-31{
+    filter: sepia(.5);
+    /* punto intermedio */
+}
+
+.picture-32{
+    filter: sepia(.2);
+    /* nos acercamos más a la foto original */
+}
+
+.picture-33{
+    filter: sepia(.7);
+    /* nos acercamos más al filtro sepia */
+}
+

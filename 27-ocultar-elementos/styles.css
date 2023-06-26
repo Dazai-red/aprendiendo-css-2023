@@ -1,0 +1,64 @@
+/* 
+    Para ocultar un elemento tenemos en principio 3 (aunque tendriamos alguna más)
+    display: none; oculta el elemento y su contexto de apilamiento es decir el espacio que ocupa se quita.
+    visibility: hidden; oculta el elemento mantiene el apilamiento y no se ve afectado por otras 
+    opacity: 0; hace muy transparente el elemento pero lo susuarios pueden interactuar con ellos
+*/
+.paragraph{
+    background-color: #2872A2;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0 0 20px;
+}
+
+.paragraph:nth-child(2){
+    background-color: darkgray;
+    display: none;
+}
+
+.paragraph:nth-child(4){
+    background-color: cadetblue;
+    visibility: hidden;
+}
+
+.paragraph:nth-child(6){
+    background-color: coral;
+    opacity: 0;
+}
+
+.paragraph:hover{
+    background-color: red;
+    color: black;
+    visibility: visible;
+    opacity: 1; 
+}
+
+.list__item{
+    display: inline;
+    padding: 0 50px;
+    background-color: aquamarine;
+}
+
+
+.list__item:nth-child(2){
+    display: none;
+}
+
+.list__item:nth-child(4){
+    visibility: hidden;
+}
+
+.list__item:nth-child(6){
+    opacity: 0;
+}
+
+/* De esta forma vemos la diferencia entre opacity y visibility, con opcaity el elemento sigue estando*/
+
+.list__item:hover {
+    background-color: red;
+    color: black;
+    display: inline;
+    visibility: visible;
+    opacity: 1; 
+}

@@ -1,0 +1,47 @@
+/* 
+   polygon() podemos construir casi cualquier pologino que se nos ocurra con la excepción de que no podemos hacer curvas.
+   Tiene que ser un poligono con los ángulos sin curvas.
+
+   Especifica una serie de puntos (mínimo 3: porque el poligono más simple que existe es un triángulo) para definir la zona 
+   visible siendo el punto 0 0 la esquina superior izquierda.
+   
+   Los puntos se especifican en parejas de ejeX y ejeY separando cada punto por comas.
+
+*/
+body {
+    background-color: #333;
+}
+
+.box{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+.box,
+div[class^='box__item']{
+    width: 400px;
+    height: 400px;
+}
+
+.box__item-1{
+    background-color: salmon;
+    /* primer punto se coloca en esquina superior izquierda, el segundo en la esquina inferior
+     izquierda y el tercero se coloca en la esquina superior derecha */
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.box__item-2{
+    background-color: salmon;
+    /* dibujando un triangulo equilatero que empiece en el centro del cuadrado*/
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+}
+
+.box__item-3{
+    background-color: salmon;
+    /* dibujando un triangulo equilatero que empiece en el centro del cuadrado*/
+    clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
+}
+
+

@@ -1,0 +1,44 @@
+/* 
+    Cuando no queremos usar un max-width del 100% se utilizan estas dos propiedades. 
+
+    Object-fit: se usa para especificar cómo se debe cambiar el tamaño de <img> o <video> para que se ajuste a su contenedor.
+        fill: valor por defecto
+        contain: El contenido se ajustará hasta rellenar de forma horizontal o vertical el contenedor sin deformarse.
+        cover: El contenido se ajustará hasta rellenar de forma horizontal y vertical el contenedor sin deformarse.
+        none: El contenido no se redimensiona y mantiene su tamaño original mostrando solo el trozo de las dimensiones especificadas.
+        scale-down: selecciona el menor de la comparación entre los valores none y contain. Parecido a un if.
+    
+        Los valores más utilizados son cover y contain.
+    
+    Object-position: coloca la imagen cuando esta no se muestra completa en el contenedor: utiliza dos valores x o y si la imagen ya ocupa el eje 
+    y controlaremos solo el eje x. acepta palabras reservadas left, center, right, cualquier medida, y medidas con valores negativos. 
+
+*/
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+.img {
+    width: 250px;
+    height: 450px;
+    /* object-fit: contain; */
+    object-fit: cover;
+    background-color: red;
+    /* object-position: -50px; */
+    object-position: left;
+    transition: object-position 1.5s;
+}
+
+.img:hover{
+    object-position: right;
+}
+
+.img-2{
+    max-width: 100%;
+    height: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

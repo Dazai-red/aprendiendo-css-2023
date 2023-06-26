@@ -1,0 +1,28 @@
+/* 
+   path() Define una forma mediante una regla de relleno SVG opcional y una definición de ruta SVG.
+
+*/
+body {
+    background-color: #333;
+}
+
+.box{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+.box,
+.box__item-1{
+    width: 400px;
+    height: 400px;
+}
+
+.box__item-1{
+    background-color: salmon;
+    clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+}
+
+
+

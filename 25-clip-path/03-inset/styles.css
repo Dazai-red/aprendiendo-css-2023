@@ -1,0 +1,81 @@
+/* 
+    inset() dibuja un borde transparente por dentro de la caja
+    inset(all | y x | top x bottom | top left bottom right) igual que el modelo de caja
+    
+    Existe la opción de redondear las esquinas, para ello después de los valores de inset pondremos
+    round 
+    inset(*** round all | 
+        top-left & bottom-right top-right & bottom-left |
+        top-left top right & bottom-left bottom-right |
+        top-left top-right bottom-right bottom-left
+    )
+*/
+body {
+    background-color: #333;
+}
+
+.box{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+.box,
+div[class^='box__item']{
+    width: 400px;
+    height: 400px;
+}
+
+/* Haciendo circulos */
+
+.box__item-1{
+    background-color: salmon;
+    /* oculta 20 px a todos los lados */
+    clip-path: inset(20px);
+}
+
+.box__item-2{
+    background-color: salmon;   
+    /* oculta 20px arriba y abajo y 50px a los lados */
+    clip-path: inset(20px 50px);
+}
+
+.box__item-3{
+    background-color: salmon;   
+    /* oculta 20px al top oculta 50px en el eje x oculta 100px abajo */
+    clip-path: inset(20px 50px 100px);
+}
+
+.box__item-4{
+    background-color: salmon;   
+    /* oculta en el sentido de las agujas de reloj oculta 20px arriba 50 a la derecha 100 abajo y 150 a la izquierda */
+    clip-path: inset(20px 50px 100px 150px);
+}
+
+.box__item-5{
+    background-color: salmon;   
+    /* podemos redondear todas las esquinas con round seguido de los px de ese redondeo*/
+    clip-path: inset(20px round 15px);
+}
+
+.box__item-6{
+    background-color: salmon;   
+    /* los redondeos funcionan igual que el modelo de caja y la propia función inset */
+    clip-path: inset(20px round 20px 50px);
+}
+
+.box__item-7{
+    background-color: salmon;   
+    /* los redondeos funcionan igual que el modelo de caja y la propia función inset */
+    clip-path: inset(20px round 20px 50px 100px);
+}
+
+.box__item-8{
+    background-color: salmon;   
+    /* los redondeos funcionan igual que el modelo de caja y la propia función inset */
+    clip-path: inset(20px round 20px 50px 100px 150px);
+}
+
+
+

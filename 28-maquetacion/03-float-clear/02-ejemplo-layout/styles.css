@@ -1,0 +1,50 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    float: left;
+    height: 70px;
+    background-color: red;
+}
+
+.sidebar{
+    width: 25%;
+    float: left;
+    height: 700px;
+    background-color: sandybrown;
+}
+
+.content{
+    width: 75%;
+    float: left;
+    background-color: turquoise;
+    height: 700px;
+    overflow: hidden;
+}
+
+.footer{
+    width: 100%;
+    /* float: left; */
+    height: 41px;
+    background-color: brown;
+    clear: both;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: darkgrey;
+    margin: 10px;
+    float: left;
+}
+
+.box--right{
+    float: right;
+}
+

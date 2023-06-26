@@ -1,0 +1,24 @@
+/* 
+    Existen diversas utilidades para este tipo de elementos, desde crear información que se muestre como una tabla,
+    aunque utilicemos contenedores que no son realmente tablas, hasta la maquetación CSS aprovechando las características
+    de las tablas.
+
+    Lo de presentar información tabulada, pero sin usar tablas te puede servir para maquetar pequeñas partes de una página, 
+    como por ejemplo una ficha de producto, donde no deseas usar TABLE para mantener la semántica del contenido.
+
+    maquetar con tablas es una de las mayores aberraciones en el mundo del diseño web NO LO HAGAS salvo que sea necesario.
+*/
+
+.tablagen{
+    display: table;
+}
+
+.fila{
+    display: table-row;
+}
+
+.col{
+    display: table-cell;
+    padding: 12px;
+    background: #ddd;
+}

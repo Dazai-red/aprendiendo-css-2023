@@ -1,0 +1,108 @@
+/* 
+    circle() dibuja un circulo, debe tener una media fija, o podemos especificar un centro con at.
+    circle(100px at mediaX medidaY | palabraClaveX palabraClaveY)
+
+    ellipse() dibuja una elipse, funciona igual que el circulo, pero debemos de especificar 2 centros, 
+    el horizontal y el vertical
+
+*/
+body {
+    background-color: #333;
+}
+
+.box{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+.box,
+div[class^='box__item']{
+    width: 400px;
+    height: 400px;
+}
+
+/* Haciendo circulos */
+
+.box__item-1{
+    background-color: salmon;   
+    clip-path: circle(100px);
+}
+
+.box__item-2{
+    background-color: salmon;   
+    /* eje x si ponemos solo un valor en at */
+    clip-path: circle(100px at 20%);
+}
+
+/* Con los 3 hacemos lo mosmio */
+
+.box__item-3{
+    background-color: salmon;   
+    clip-path: circle(100px at 0 0);
+}
+
+.box__item-4{
+    background-color: salmon;   
+    clip-path: circle(100px at top left);
+}
+
+.box__item-5{
+    background-color: salmon;   
+    clip-path: circle(100px at left top);
+}
+
+
+.box__item-6{
+    background-color: salmon;   
+    /* si ponemos top solo se coloca en el eje y porque top es un valor de eje y*/
+    clip-path: circle(100px at top);
+}
+
+.box__item-7{
+    background-color: salmon;   
+    /* si ponemos left solo se coloca en el eje x porque left es un valor de eje x*/
+    clip-path: circle(100px at left);
+}
+
+/* Haciendo elipses */
+
+.box__item-8{
+    background-color: salmon;   
+    /* No funciona porque necesitamos especificar el segundo centro*/
+    clip-path: ellipse(100px);
+}
+
+.box__item-9{
+    background-color: salmon;   
+    /* Al especificar 2 centros iguales haremos un circulo (no tiene mucho sentido teniendo la función de circle)*/
+    clip-path: ellipse(100px 100px);
+}
+
+.box__item-10{
+    background-color: salmon;   
+    /* Al especificar 2 centros iguales haremos un circulo (no tiene mucho sentido teniendo la función de circle)*/
+    clip-path: ellipse(100px 50px);
+}
+
+.box__item-11{
+    background-color: salmon;   
+    /* al igual que circle podemos posicionarla igual que circle*/
+    clip-path: ellipse(100px 50px at top);
+}
+
+.box__item-12{
+    background-color: salmon;   
+    /* al igual que circle podemos posicionarla igual que circle*/
+    clip-path: ellipse(100px 50px at left);
+}
+
+.box__item-12{
+    background-color: salmon;   
+    /* al igual que circle podemos posicionarla igual que circle*/
+    clip-path: ellipse(100px 50px at 400px 400px);
+}
+
+
+

@@ -1,0 +1,25 @@
+/* 
+    Veamos otro ejemplo que nos puede arrojar más luz todavía a estas posibilidades de las CSS. 
+    En este caso tenemos tres casillas y cada una con un texto. Queremos que se muestren una al lado de
+    la otra y que tengan un espacio de separación entre medias.
+
+     los elementos con display table-cell no te aceptan la propiedad margin. Esto es porque los elementos de 
+     una tabla en general no lo admiten, en lugar de eso recuerda que tenemos que indicar en la tabla el espacio 
+     entre las casillas. En TABLE tradicional usábamos el cellspacing.
+
+     para conseguir un espacio entre medias se puede probar el atributo de CSS border-spacing, que colocamos 
+     en la etiqueta general que engloba a los elementos que se comportan como tabla.
+*/
+section {
+    width: 100%;
+    border-spacing: 5px;
+    /* display: table; */
+}
+
+article{
+    display: table-cell;
+    padding: 12px;
+    background: #ddd;
+    width: 33.33333%; 
+    border: 4px solid #f86;
+}
