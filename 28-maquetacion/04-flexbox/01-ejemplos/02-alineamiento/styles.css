@@ -1,0 +1,56 @@
+/* 
+    Flexbox - alineamiento
+        margin: Los hijos de un contenedor al indicar margin actua de forma diferente que el modelo de caja. los margin 
+        funcionan de manera inversa y ademas si a todos los margin left right top bottom colocamos auto centra horizontal
+        y verticalmente el item.
+        
+        Estas propiedades se aplican al flex-container
+        
+        main-axis: 
+            justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
+
+            flex-start: alinea los elementos al principio del main-axis.
+
+
+
+        cross-axis: 
+*/
+div[class^='flex-container'] {
+    background-color: #FCA17D;
+    padding: .5em 0;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.flex-container-0{
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.flex-item{
+    width: 30px;
+    height: 30px;
+    margin: .5em;
+    background-color: blueviolet;
+    color: aliceblue;
+    text-align: center;
+    line-height: 30px;
+}
+
+.flex-item--centrado{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    line-height: 80px;
+}
+
+.flex-item--margin-left-auto{
+    margin-left: auto;
+}
+
+.flex-item--margin-right-auto{
+    margin-right: auto;
+}
