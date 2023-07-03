@@ -1,25 +1,41 @@
 /* 
     Flexbox - alineamiento
         margin: Los hijos de un contenedor al indicar margin actua de forma diferente que el modelo de caja. los margin 
-        funcionan de manera inversa y ademas si a todos los margin left right top bottom colocamos auto centra horizontal
-        y verticalmente el item.
+        funcionan de manera inversa y ademas si indicamos a todos los margin: left right top bottom en auto centra horizontal
+        y verticalmente el item en el caso de que haya un único elemento.
         
         Estas propiedades se aplican al flex-container
         
         main-axis: 
             justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
 
-            flex-start: alinea los elementos al principio del main-axis.
+            flex-start: alínea los elementos al principio del main-axis.
+            center: centra los elementos en la mitad del main-axis.
+            flex-end: alínea los elementos al final del main-axis
 
+            space-between: distribuye los items a la misma distancia y no deja espaciado exterior en el primer ni el último item.
 
+            space-around: distribuye los items a la misma distancia y deja un espacio exterior en el primero y en el último item.
+
+            space-evenly: distribuye los items y los espacios exteriores del primer y último item dejando la misma distancia entre todos.
 
         cross-axis: 
+            align-item: Una sola línea: 
+                flex-start | center | flex-end |stretch(default) | baseline
+            align-content: varias líneas
+                flex-start | center | flex-end | stretch(default) | baseline
+            
+            align-self: Se aplica al flex item. Sirve para alinear un elemento en concreto en el cross-axis
+
+        La propiedad gap de flexbox nos permite poner espacios muy parecido a margin pero solo espacio entre items no espacios respecto al 
+        contenedor.
 */
 div[class^='flex-container'] {
     background-color: #FCA17D;
     padding: .5em 0;
     margin-bottom: 25px;
     display: flex;
+    height: 300px;
 }
 
 .flex-container-0{
@@ -53,4 +69,148 @@ div[class^='flex-container'] {
 
 .flex-item--margin-right-auto{
     margin-right: auto;
+}
+
+.flex-container-3{
+    justify-content: center;
+}
+
+.flex-container-4{
+    justify-content: space-between;
+}
+
+.flex-container-4--segundo-ejemplo .flex-item{
+    margin: 0;
+    /* le quito el margin a los items para que se vea que no quedan espacios */
+}
+
+.flex-container-5{
+    justify-content: space-evenly;
+    /* esto anteriormente era realmente complicado, se tenia que hacer con javascript antes de flexbox era un caos hacer esto */
+}
+
+.flex-container-6{
+    justify-content: space-around;
+}
+
+.flex-container-7{
+    flex-direction: column;
+    /* cambiando el main-axis */
+    justify-content: center;
+}
+
+.flex-container-7 .flex-item{
+    margin: 0;
+}
+
+.flex-container-8{
+    align-items: flex-start;
+    /* no es el valor por defecto aunque lo parezca*/
+}
+.flex-container-8 .flex-item{
+    height: auto;
+    /* para ver la diferencia entre flex-start y stretch */
+}
+
+.flex-container-9{
+    align-items: center;
+    padding: 4em 0 !important;
+    /* no es recomendable hacer importants pero para hacer el ejemplo más rápido */
+}
+
+.flex-container-10{
+    align-items: flex-end;
+}
+
+.flex-container-11{
+    align-items: stretch;
+    /* si quitamos el alto declarado a los items veremos la diferencia*/
+    /* Esto es importante tenerlo en cuenta al trabajar con imagenes junto con flexbox */
+}
+
+.flex-container-11 .flex-item{
+    height: auto;
+}
+
+
+.flex-container-12{
+    flex-wrap: wrap;
+    /* el valor por defecto stretch lo que hace es dejar un espacio entre los items  */
+}
+
+.flex-container-13{
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.flex-container-14{
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.flex-container-15{
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.prices{
+    display: flex;
+    align-items: baseline;
+    /* establecemos una linea que todo el texto se ajuste a la misma altura la propia caja se mueve para alinearse */
+}
+
+.prices__item{
+    width: 25%;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.prices__item:first-child {
+    background-color: peru;
+}
+
+.prices__item:nth-child(2) {
+    background-color: green;
+    line-height: 20px;
+}
+
+.prices__item:nth-child(3) {
+    background-color: indianred;
+    line-height: 15px;
+}
+
+.prices__item:nth-child(4) {
+    background-color: lightgreen;
+    line-height: 50px;
+}
+
+.prices2{
+    display: flex;
+    align-items: flex-start;
+    height: 600px;
+}
+
+.prices2__item{
+    width: 25%;
+    height: 300px;
+}
+
+.prices2__item:first-child {
+    background-color: peru;
+}
+
+.prices2__item:nth-child(2) {
+    background-color: green;
+    line-height: 20px;
+    align-self: flex-end;
+}
+
+.prices2__item:nth-child(3) {
+    background-color: indianred;
+    line-height: 15px;
+}
+
+.prices2__item:nth-child(4) {
+    background-color: lightgreen;
+    line-height: 50px;
 }
